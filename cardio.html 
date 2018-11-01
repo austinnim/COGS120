@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"
+    <title>Cardio Home Page</title>
+  </head>
+  <body>
+    <p> This is the home page for cardio programs, where the user will be able to select specific <br>
+    programs related to their type of cardio workout. </p>
+  </body>
+</html>

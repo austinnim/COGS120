@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"
+    <title>Pull Program Page</title>
+  </head>
+  <body>
+    <p> This is the home page for a pull-day workout program, where there will be a list of exercises.
+      In addition, exercises will be tabs that expand with details of how to perform the exercise
+      and why it's a chosen exercise. </p>
+  </body>
+</html>
