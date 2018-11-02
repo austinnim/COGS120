@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Power Lifting Home Page</title>
+    <link rel="stylesheet" href="./navbar.css" type="text/css" />
+    <link rel="stylesheet" href="./powerlifting.css" type="text/css" />
+    <script type="text/javascript" src="./powerlifting.js">This page requires javascript</script>
+  </head>
+  <body>
+    <img id="back" alt="Previous Page" onclick="returnHome()" />
+
+
+    <header>
+      <h1>POWERLIFTING</h1>
+      <p>Powerlifting is a strength sport that consists of three lifts: squat, bench, and deadlift.</p>
+    </header>
+    <p>Pick a program below to help you achieve your powerlifting goals!</p>
+
+    <main id="programs">
+      <div class="flex-row" id="top-row">
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Novice Icon" onclick="noviceProgram()"/>
+            <figcaption>Novice</figcaption>
+          </figure>
+        </div>
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Intermediate Icon" onclick="intermediateProgram()" />
+            <figcaption>Intermediate</figcaption>
+          </figure>
+        </div>
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Advanced Icon" onclick="advancedProgram()"/>
+            <figcaption>Advanced</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="flex-row" id="mid-row">
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Linear Icon" onclick="linearProgram()"/>
+            <figcaption>Linear</figcaption>
+          </figure>        </div>
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Strength Icon" onclick="strengthProgram()"/>
+            <figcaption>Strength</figcaption>
+          </figure>
+        </div>
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Powerbuilding Icon" onclick="powerbuildingProgram()"/>
+            <figcaption>Powerbuilding</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="flex-row" id="bot-row">
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Sheiko's Icon" onclick="sheikoProgram()"/>
+            <figcaption>Sheiko's</figcaption>
+          </figure>
+        </div>
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Powerbuilding Icon" onclick="canditoProgram()"/>
+            <figcaption>Candito's</figcaption>
+          </figure>
+        </div>
+        <div class="icons">
+          <figure>
+            <img src="./x.png" alt="Keizen Icon" onclick="keizenProgram()"/>
+            <figcaption>Keizen</figcaption>
+          </figure>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="navbar"><script src="nav.js"></script></nav>
+    </footer>
+  </body>
+</html>

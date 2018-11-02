@@ -1,18 +1,22 @@
 function visitLogin(){
-  window.open("./login.html");
+  location.href = "./login.html";
 }
 function visitSignup(){
-  window.open("./signup.html");
+  location.href = "./signup.html";
 }
 
 function cardioHome(){
-  window.open("./cardio.html");
+  location.href = "./cardio.html";
 }
 
 function powerliftingHome(){
-  window.open("./powerlifting.html");
+  location.href = "./powerlifting.html";
 }
 
 function hybridHome(){
-  window.open("./hybrid.html");
+  location.href = "./hybrid.html";
+}
+
+function wip(){
+  location.href = "./wip.html";
 }
