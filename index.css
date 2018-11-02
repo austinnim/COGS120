@@ -1,0 +1,30 @@
+#login {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+}
+
+#signup{
+  position: absolute;
+  top: 1%;
+  right: 0;
+}
+.flex-row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.icons {
+  margin: 1%;
+  border: 1px solid black;
+  height: 25%;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  cursor: pointer;
+}

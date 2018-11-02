@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>Home Page</title>
+    <link rel="stylesheet" href="./index.css" text="text/css" />
+    <script type="text/javascript" src="./index.js">This page requires javascript</script>
   </head>
   <body>
+    <header>
+      <h3>FITNESS</h3>
+      <button id="login" type="submit" onclick="visitLogin()">Login</button>
+      <button id="signup" type="submit" onclick="visitSignup()">Signup</button>
+    </header>
+
+    <div class="flex-row">
+      <div class="icons"><img alt="Cardio Icon" onclick="cardioHome()"/></div>
+      <div class="icons"><img alt="Powerlifting Icon" onclick="powerliftingHome()"/></div>
+      <div class="icons"><img alt="Hybrid Icon" onclick="hybridHome()"/></div>
+    </div>
+    <div class="flex-row">
+      <div class="icons"><img alt="Cardio Icon" onclick="cardioHome()"/></div>
+      <div class="icons"><img alt="Powerlifting Icon" onclick="powerliftingHome()"/></div>
+      <div class="icons"><img alt="Hybrid Icon" onclick="hybridHome()"/></div>
+    </div>
+
   </body>
 </html>
