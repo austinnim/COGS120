@@ -77,51 +77,6 @@
     font-weight: bold;
     text-decoration: underline;
   }
-
-
-  /* 4th child of grid -- bottom screen nav bar */
-  .grid-container footer {
-    grid-column: span 4;
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 8vh;
-  }
-
-  nav {
-    display: flex;
-    flex-basis: auto;
-    align-self: stretch;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav > a {
-    border: 3px solid black;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
-
-  }
-  #glossary {
-    flex: 1;
-  }
-  #myprofile {
-    flex: 2;
-  }
-  #community {
-    flex: 1;
-  }
-
-  footer > nav > a > img {
-    max-height: 110%;
-    max-width: 110%;
-  }
 }
 /* to make it so that it shows moblie view, and when the screen expands then it'll display for desktop */
 @media only screen and (min-width: 768px) {

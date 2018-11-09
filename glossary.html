@@ -33,49 +33,163 @@
 
     <button class="accordion" onclick="dropDown()">Deadlift</button>
     <div class="panel">
-        <div class="slideshow-container">
+      <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div class="mySlides" id="description">
           <p>The standard deadlift is a heavily loaded version of the hip hinge, which is a basic human movement pattern
-          The hip hinge is exactly what is sounds like: hinging at the hips. It's not sitting down, but more like sitting back.</p>
+            The hip hinge is exactly what is sounds like: hinging at the hips. It's not sitting down, but more like sitting back.</p>
+          </div>
+
+          <div class="mySlides" id="muscles">
+            <picture>
+              <img src="x.png" alt="muscle groups used">
+              <p>Insert picture of muscle groups associated with exercise</p>
+            </picture>
+          </div>
+
+          <div class="mySlides" id="instructions">
+            <video>
+              <p>Insert video</p>
+            </video>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <div class="mySlides" id="muscles">
-          <picture>
-            <img src="x.png" alt="muscle groups used">
-            <p>Insert picture of muscle groups associated with exercise</p>
-          </picture>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
-        <div class="mySlides" id="instructions">
-          <video>
-            <p>Insert video</p>
-          </video>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
 
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+
+      <button class="accordion" onclick="dropDown()">Squat</button>
+      <div class="panel">
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides" id="description">
+            <p>The standard deadlift is a heavily loaded version of the hip hinge, which is a basic human movement pattern
+              The hip hinge is exactly what is sounds like: hinging at the hips. It's not sitting down, but more like sitting back.</p>
+            </div>
+            <div class="mySlides" id="muscles">
+              <picture>
+                <img src="x.png" alt="muscle groups used">
+                <p>Insert picture of muscle groups associated with exercise</p>
+              </picture>
+            </div>
+            <div class="mySlides" id="instructions">
+              <video>
+                <p>Insert video</p>
+              </video>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+
+        <button class="accordion">Hypertrophy</button>
+        <div class="panel">
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides" id="description">
+              <p>An increase in cell size (girth), usually in reference to fat or muscle cells.</p>
+            </div>
+            <div class="mySlides" id="muscles">
+              <picture>
+                <img src="x.png" alt="muscle groups used">
+                <p>Insert picture depicting hypertrophy</p>
+              </picture>
+            </div>
+            <div class="mySlides" id="instructions">
+              <video>
+                <p>Insert informational video</p>
+              </video>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+
+
+        <button class="accordion">Reps</button>
+        <div class="panel">
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides" id="description">
+              <p>The number of times an exercise is repeated within a single exercise “set.”</p>
+            </div>
+            <div class="mySlides" id="muscles">
+              <picture>
+                <img src="x.png" alt="muscle groups used">
+                <p>Insert information about rep ranges</p>
+              </picture>
+            </div>
+            <div class="mySlides" id="instructions">
+              <video>
+                <p>Insert informational video</p>
+              </video>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+
+
+        <button class="accordion">Sets</button>
+        <div class="panel">
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides" id="description">
+              <p>A basic unit of a workout containing the number of times (repetitions) a specific exercise is done (e.g. do 3 sets of 5 repetitions with 100 pounds).</p>
+            </div>
+          <div class="mySlides" id="muscles">
+            <picture>
+              <img src="x.png" alt="muscle groups used">
+              <p>Insert information about rep ranges</p>
+            </picture>
+          </div>
+          <div class="mySlides" id="instructions">
+            <video>
+              <p>Insert informational video</p>
+            </video>
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
       </div>
-    </div>
-
-
-    <button class="accordion" onclick="dropDown()">Squat</button>
-    <div class="panel">
-      <p>The standard deadlift is a heavily loaded version of the hip hinge, which is a basic human movement pattern <br>
-        The hip hinge is exactly what is sounds like: hinging at the hips. It's not sitting down, but more like sitting back.</p>
-    </div>
-
-      <button class="accordion">Hypertrophy</button>
-      <button class="accordion">Reps</button>
-      <button class="accordion">Sets</button>
 
       <main>
       </main>

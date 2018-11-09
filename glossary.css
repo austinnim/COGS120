@@ -31,6 +31,7 @@
   #myUL{
     list-style-type: none;
     visibility: hidden;
+    display: none;
   }
 
   #myUL li a {
@@ -52,7 +53,9 @@
     grid-column: span 2;
     font-size: 3vh;
   }
-
+  label {
+    grid-column: span 2;
+  }
   /* Style the buttons that are used to open and close the accordion panel */
   .accordion {
     grid-column: span 2;
@@ -97,9 +100,7 @@
     width: 100%;
     padding: 0px;
     background-color: white;
-    display: block;
-    overflow: hidden;
-
+    display: none;
   }
 
   /* Slideshow container */
