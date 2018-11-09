@@ -1,16 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Glossary Page</title>
-    <link rel="stylesheet" href="navbar.css" text="text/css" />
-  </head>
-  <body>
-    <p> This is the home page for a powerbuilding workout program, where there will be a list of exercises.
-      In addition, exercises will be tabs that expand with details of how to perform the exercise
-      and why it's a chosen exercise. </p>
+<head>
+  <meta charset="UTF-8" />
+  <base href="./" />
+  <title>Glossary Page</title>
+  <link rel="stylesheet" href="navbar.css" text="text/css" />
+  <link rel="stylesheet" href="glossary.css" text="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+  <script type="text/javascript" src="glossary.js">This page requires javascript</script>
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+      <h1>Glossary</h1>
+    </header>
+
+    <div id="searchBar">
+      <input type="text" id="myInput" onkeyup="search()" placeholder="Search for terms" />
+      <ul id="myUL">
+        <li><a href="pull.html">Hybrid - Pull</a></li>
+        <li><a href="pull.html">Hybrid - Back</a></li>
+        <li><a href="push.html">Hybrid - Push</a></li>
+        <li><a href="upperbody.html">Hybrid - Upperbody</a></li>
+
+        <li><a href="strength.html">Powerlifting - Strength</a></li>
+        <li><a href="linear.html">Powerlifiting - Linear</a></li>
+        <li><a href="keizen.html">Powerlifting - Keizen </a></li>
+      </ul>
+    </div>
+
+    <h2>-- Popular Searches --</h2>
+
+    <button class="accordion" onclick="dropDown()">Deadlift</button>
+    <div class="panel">
+        <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides" id="description">
+          <p>The standard deadlift is a heavily loaded version of the hip hinge, which is a basic human movement pattern
+          The hip hinge is exactly what is sounds like: hinging at the hips. It's not sitting down, but more like sitting back.</p>
+        </div>
+
+        <div class="mySlides" id="muscles">
+          <picture>
+            <img src="x.png" alt="muscle groups used">
+            <p>Insert picture of muscle groups associated with exercise</p>
+          </picture>
+        </div>
+
+        <div class="mySlides" id="instructions">
+          <video>
+            <p>Insert video</p>
+          </video>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+
+    <button class="accordion" onclick="dropDown()">Squat</button>
+    <div class="panel">
+      <p>The standard deadlift is a heavily loaded version of the hip hinge, which is a basic human movement pattern <br>
+        The hip hinge is exactly what is sounds like: hinging at the hips. It's not sitting down, but more like sitting back.</p>
+    </div>
+
+      <button class="accordion">Hypertrophy</button>
+      <button class="accordion">Reps</button>
+      <button class="accordion">Sets</button>
+
+      <main>
+      </main>
       <footer>
-        <div class="navbar"><script src="nav.js"></script></nav>
+        <script src="nav.js"></script>
       </footer>
+    </div>
   </body>
-</html>
+  </html>

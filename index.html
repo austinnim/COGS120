@@ -2,67 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <base href="./" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="./index.css" type="text/css" />
-    <link rel="stylesheet" href="./navbar.css" type="text/css" />
+    <link rel="stylesheet" href="navbar.css" text="text/css" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
     <script type="text/javascript" src="./index.js">This page requires javascript</script>
   </head>
   <body>
-    <header>
-      <h3>FITNESS</h3>
-      <div id="login">
-        <button type="submit" onclick="visitLogin()">Login</button>
-      </div>
-      <div id="signup">
-        <button type="submit" onclick="visitSignup()">Signup</button>
-      </div>
-    </header>
-    <h1>What do you want to work on? </h1>
-    <main id="programs">
-      <div class="flex-row" id="top-row">
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Cardio Icon" onclick="cardioHome()"/>
-            <figcaption>Cardio</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Powerlifting Icon" onclick="powerliftingHome()"/>
-            <figcaption>Powerlifting</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Hybrid Icon" onclick="hybridHome()"/>
-            <figcaption>Hybrid</figcaption>
-          </figure>
-        </div>
-      </div>
+    <!-- Create grid overlay -->
+    <div class="grid-container">
+      <!-- 1st child -->
+      <header>
+        <h1><a href="index.html">beneFIT</a></h1>
+      </header>
 
-      <div class="flex-row" id="bot-row">
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="X Workout" onclick="wip()"/>
-            <figcaption>X Workout</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Y Workout" onclick="wip()"/>
-            <figcaption>Z Workout</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Z Workout" onclick="wip()"/>
-            <figcaption>Y Workout</figcaption>
-          </figure>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="navbar"><script src="nav.js"></script></nav>
-    </footer>
+      <!-- 2nd child -->
+      <p> What health goals do you want to work on? </p>
+
+      <!-- 3rd child -->
+      <main class="flex-container">
+        <figure>
+          <a href="cardio.html"><img src="x.png" alt="Cardio Icon"></a>
+          <figcaption> Cardio </figcaption>
+        </figure>
+        <figure>
+          <a href="powerlifting.html"><img src="x.png" alt="Powerlifting Icon"></a>
+          <figcaption> Powerlifting </figcaption>
+        </figure>
+        <figure>
+          <a href="hybrid.html"><img src="x.png" alt="Hybrid Icon"></a>
+          <figcaption> Hybrid </figcaption>
+        </figure>
+        <figure>
+          <a href="olympiclifting.html"><img src="x.png" alt="Olympic Lifting Icon"></a>
+          <figcaption> Olympic Lifting </figcaption>
+        </figure>
+      </main>
+
+      <!-- 4th child -->
+      <footer>
+        <script src="nav.js"></script>
+        <!--
+        <nav>
+          <a href="glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /></a>
+          <a href="myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /></a>
+          <a href="community.html" id="community"><img src="navbar_icons/community.png" alt="community icon" /></a>
+        </nav>
+        -->
+      </footer>
+
+    </div> <!-- End of container(grid) -->
   </body>
 </html>

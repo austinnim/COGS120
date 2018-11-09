@@ -2,19 +2,41 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <base href="./" />
     <title>Cardio Home Page</title>
-    <link rel="stylesheet" href="./navbar.css" type="text/css" />
+    <link rel="stylesheet" href="navbar.css" type="text/css" />
+    <link rel="stylesheet" href="workouttypes.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   </head>
   <body>
-    <p> This is the home page for cardio programs, where the user will be able to select specific <br>
-    programs related to their type of cardio workout. </p>
+    <div class="grid-container">
+      <header>
+        <a href="index.html">&#10229;</a>
+        <h1>CARDIO</h1>
+      </header>
 
-    <a href="./distance.html">Distance</a><br>
-    <a href="./hiit.html">High Intensity Interval Training</a><br>
-    <a href="./speed.html">Speed</a>
+      <p>Definition of cardio</p>
 
-  <footer>
-    <div class="navbar"><script src="nav.js"></script></nav>
-  </footer>
+      <p>Pick a program below to help you achieve your cardio goals</p>
+
+      <main class="flex-container">
+        <figure>
+          <a href="distance.html"><img src="x.png" alt="Distance Icon"></a>
+          <figcaption> Distance </figcaption>
+        </figure>
+        <figure>
+          <a href="hiit.html"><img src="x.png" alt="HIIT Icon"></a>
+          <figcaption> High Intensity Interval Training </figcaption>
+        </figure>
+        <figure>
+          <a href="speed.html"><img src="x.png" alt="Speed Icon"></a>
+          <figcaption> Speed </figcaption>
+        </figure>
+      </main>
+
+      <footer>
+        <script src="nav.js"></script>
+      </footer>
+    </div>
   </body>
 </html>

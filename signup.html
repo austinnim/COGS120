@@ -3,10 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sign-up Page</title>
+    <base href="./" />
+    <link rel="stylesheet" href="login.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   </head>
   <body>
-    <a href="./index.html"> Return Home </a>
-    <p> This will serve as a sign up page for users to create their own accounts </p>
+    <div class="grid-container">
+      <header>
+              <a href="./index.html">&#10229;</a>
+        <h1> SIGNUP </h1>
+      </header>
+
+      <form id="account-info"method="post">
+        <label for="name">Name<input id="name" type="text" name="fullname" /></label>
+        <hr />
+        <label for="email">Email<input id="email" type="text" name="email"/></label>
+        <hr />
+        <label for="password">Password<input id="password" type="text" name="password" /></label>
+        <hr />
+        <label for="confirmPass">Confirm Password<input id="confirmPass" type="text" name="confirmPass" /></label>
+        <hr />
+      </form>
+
+      <footer>
+        <a href="index.html">&#10233;</a>
+      </footer>
+    </div>
   </body>
 </html>
->

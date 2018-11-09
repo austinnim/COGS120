@@ -2,10 +2,32 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <base href="./" />
     <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   </head>
   <body>
-    <a href="./index.html"> Return Home </a>
-    <p> This will serve as a login page for users to access their personalized accounts </p>
+    <div class="grid-container">
+      <header>
+        <a href="./index.html">&#10229;</a>
+        <h1> LOGIN </h1>
+      </header>
+
+      <form id="account-info" method="post">
+        <label for="user">Email
+          <input id="user" type="text" name="username" />
+        </label>
+        <hr />
+        <label for="password">Password
+          <input type="text" name="password" />
+        </label>
+        <hr />
+      </form>
+
+      <footer>
+        <a href="myprofile.html">&#10233;</a>
+      </footer>
+    </div>
   </body>
 </html>

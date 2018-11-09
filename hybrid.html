@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hybrid Home Page</title>
-    <link rel="stylesheet" href="./navbar.css" type="text/css" />
-  </head>
-  <body>
-    <p> This is the home page for hybrid programs, where the user will be able to select specific <br>
-    programs related to their lifting goal(s). </p>
+<head>
+  <meta charset="UTF-8" />
+  <base href="./" />
+  <title>Hybrid Home Page</title>
+  <link rel="stylesheet" href="navbar.css" type="text/css" />
+  <link rel="stylesheet" href="workouttypes.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<body>
+  <!-- Create grid-overlay -->
+  <div class="grid-container">
+    <!-- 1st child -->
+    <header>
+      <a href="index.html">&#10229;</a>
+      <h1>HYBRID</h1>
+    </header>
+    <!-- 2nd child -->
+    <p>Definition of hybrid workouts</p>
 
-    <a href="./upperbody.html">Upper Body</a><br>
-    <a href="./lowerbody.html">Lower Body</a><br>
-    <a href="./push.html">Push Day</a><br>
-    <a href="./pull.html">Pull Day</a>
+    <!-- 3rd child -->
+    <p>Pick a program below to help you achieve your hybrid goals!</p>
 
+    <!-- 4th child -->
+    <main class="flex-container">
+      <figure>
+        <a href="upperbody.html"><img src="x.png" alt="Upper body Icon"></a>
+        <figcaption> upperbody </figcaption>
+      </figure>
+      <figure>
+        <a href="lowerbody.html"><img src="x.png" alt="Lower body Icon"></a>
+        <figcaption> lowerbody </figcaption>
+      </figure>
+      <figure>
+        <a href="push.html"><img src="x.png" alt="push Icon"></a>
+        <figcaption> Push </figcaption>
+      </figure>
+      <figure>
+        <a href="pull.html"><img src="x.png" alt="pull Icon"></a>
+        <figcaption> Pull </figcaption>
+      </figure>
+    </main>
+
+    <!-- 5th child -->
     <footer>
       <div class="navbar"><script src="nav.js"></script></nav>
-    </footer>
+      </footer>
+    </div>
   </body>
-</html>
+  </html>

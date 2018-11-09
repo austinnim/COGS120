@@ -1,88 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <base href="./" />
     <title>Power Lifting Home Page</title>
     <link rel="stylesheet" href="./navbar.css" type="text/css" />
-    <link rel="stylesheet" href="./powerlifting.css" type="text/css" />
+    <link rel="stylesheet" href="./workouttypes.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
     <script type="text/javascript" src="./powerlifting.js">This page requires javascript</script>
   </head>
   <body>
-    <img id="back" alt="Previous Page" onclick="returnHome()" />
+    <!-- Create grid-overlay -->
+    <div class="grid-container">
+      <!-- 1st child -->
+      <header>
+        <a href="index.html" id="largelink">&#10229;</a>
+        <h1 id="largeheader">POWERLIFTING</h1>
+      </header>
+
+      <!-- 2nd child -->
+      <p id="largetext">Powerlifting is a strength sport that consists of three lifts: squat, bench, and deadlift.</p>
 
 
-    <header>
-      <h1>POWERLIFTING</h1>
-      <p>Powerlifting is a strength sport that consists of three lifts: squat, bench, and deadlift.</p>
-    </header>
-    <p>Pick a program below to help you achieve your powerlifting goals!</p>
+      <!-- 3rd child -->
+      <p id="largetext">Pick a program below to help you achieve your powerlifting goals!</p>
 
-    <main id="programs">
-      <div class="flex-row" id="top-row">
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Novice Icon" onclick="noviceProgram()"/>
-            <figcaption>Novice</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Intermediate Icon" onclick="intermediateProgram()" />
-            <figcaption>Intermediate</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Advanced Icon" onclick="advancedProgram()"/>
-            <figcaption>Advanced</figcaption>
-          </figure>
-        </div>
-      </div>
+      <!-- 4th child -->
 
-      <div class="flex-row" id="mid-row">
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Linear Icon" onclick="linearProgram()"/>
-            <figcaption>Linear</figcaption>
-          </figure>        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Strength Icon" onclick="strengthProgram()"/>
-            <figcaption>Strength</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Powerbuilding Icon" onclick="powerbuildingProgram()"/>
-            <figcaption>Powerbuilding</figcaption>
-          </figure>
-        </div>
-      </div>
+      <main class="flex-container">
+        <figure>
+          <a href="novice.html"><img src="x.png" alt="Novice Icon"></a>
+          <figcaption> Novice </figcaption>
+        </figure>
+        <figure>
+          <a href="intermediate.html"><img src="x.png" alt="Intermediate Icon"></a>
+          <figcaption> Intermediate </figcaption>
+        </figure>
+        <figure>
+          <a href="advanced.html"><img src="x.png" alt="Advanced Icon"></a>
+          <figcaption> Advanced </figcaption>
+        </figure>
+        <figure>
+          <a href="linear.html"><img src="x.png" alt="Linear Icon"></a>
+          <figcaption> Linear </figcaption>
+        </figure>
+        <figure>
+          <a href="strength.html"><img src="x.png" alt="Strength Icon"></a>
+          <figcaption> Strength </figcaption>
+        </figure>
+        <figure>
+          <a href="powerbuilding.html"><img src="x.png" alt="Powerbuilding Icon"></a>
+          <figcaption> Powerbuilding </figcaption>
+        </figure>
+        <figure>
+          <a href="sheiko.html"><img src="x.png" alt="Sheiko Icon"></a>
+          <figcaption> Sheiko's </figcaption>
+        </figure>
+        <figure>
+          <a href="candito.html"><img src="x.png" alt="Candito Icon"></a>
+          <figcaption> Candito's</figcaption>
+        </figure>
+        <figure>
+          <a href="keizen.html"><img src="x.png" alt="Keizen Icon"></a>
+          <figcaption> Keizen </figcaption>
+        </figure>
+      </main>
 
-      <div class="flex-row" id="bot-row">
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Sheiko's Icon" onclick="sheikoProgram()"/>
-            <figcaption>Sheiko's</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Powerbuilding Icon" onclick="canditoProgram()"/>
-            <figcaption>Candito's</figcaption>
-          </figure>
-        </div>
-        <div class="icons">
-          <figure>
-            <img src="./x.png" alt="Keizen Icon" onclick="keizenProgram()"/>
-            <figcaption>Keizen</figcaption>
-          </figure>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <div class="navbar"><script src="nav.js"></script></nav>
-    </footer>
+      <!-- 5th child -->
+      <footer>
+        <div class="navbar"><script src="nav.js"></script></nav>
+      </footer>
+    </div> <!-- end of grid container -->
   </body>
 </html>

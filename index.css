@@ -1,74 +1,129 @@
-header {
-  margin-top: 5%;
-}
+@media only screen and (max-width: 980px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    font-family: 'Open Sans', sans-serif;
+  }
 
-header > h3 {
-  font-style: italic;
-  font-weight: bold;
-  text-decoration: underline;
-  font-size: 500%;
-  text-align: left;
-  margin-left: 5%;
-}
+  /* 1st child of grid */
+  .grid-container header{
+    grid-column: span 4;
 
-h1 {
-  font-weight: bold;
-  font-size: 600%;
-  display: block;
-  text-align: center;
-  top: 10%;
-}
+    text-align: center;
+    font-size: 4vh;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 800;
+  }
 
-#login {
-  position: absolute;
-  right: 12%;
-  top: 5%;
-  margin-right: 2%;
-}
+  .grid-container header > h1 {
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-bottom: 3%;
 
-#signup{
-  position: absolute;
-  right: 5%;
-  top: 5%;
-}
+    font-size: 7vh;
+  }
 
-.flex-row {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  width: 60%;
-}
+  .grid-container header > h1 > a {
+    color: black;
+    cursor: pointer;
+  }
 
-#programs {
-  display: block;
-}
+  .grid-container header > h1 > a:visited {
+    color: black;
+  }
 
-#bot-row {
-  margin-top: 5%;
-  margin-bottom: 15%;
-}
+  /* 2nd child of grid */
+  .grid-container p {
+    grid-column: span 4;
 
-.icons {
-  margin: 2%;
-  height: 100%;
-  width: 100%;
-  border: 3px solid black;
-}
+    margin-left: 10%;
+    margin-right: 10%;
 
-button {
-  cursor: pointer;
-  border: 3px solid black;
-  padding: 20% 30%;
-}
+    /* font styling */
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+  }
 
-img {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-}
+  /* 4th child of grid -- serves as flex box container */
+  .flex-container {
+    grid-column: span 4;
 
-img:hover {
-  background-color: grey;
-  color: black;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: baseline;
+
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+
+  .flex-container figure {
+    height: 40%;
+    width: 40%;
+  }
+
+  .flex-container figure > a > img {
+    max-height: 100%;
+    max-width: 100%;
+
+    border: 3px solid black;
+  }
+
+  .flex-container figure > figcaption {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+
+  /* 4th child of grid -- bottom screen nav bar */
+  .grid-container footer {
+    grid-column: span 4;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+  }
+
+  nav {
+    display: flex;
+    flex-basis: auto;
+    align-self: stretch;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav > a {
+    border: 3px solid black;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+
+  }
+  #glossary {
+    flex: 1;
+  }
+  #myprofile {
+    flex: 2;
+  }
+  #community {
+    flex: 1;
+  }
+
+  footer > nav > a > img {
+    max-height: 110%;
+    max-width: 110%;
+  }
+}
+/* to make it so that it shows moblie view, and when the screen expands then it'll display for desktop */
+@media only screen and (min-width: 768px) {
+
 }
