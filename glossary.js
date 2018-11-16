@@ -1,7 +1,6 @@
 function dropDown() {
   var acc = document.getElementsByClassName("accordion");
   var i;
-
   for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
           this.classList.toggle("active");
@@ -13,11 +12,10 @@ function dropDown() {
           }
       });
   }
-  plusSlides(0);
+  showSlides(1);
 }
 
 var slideIndex = 1;
-
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -44,7 +42,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
 function search() {
     // Declare variables
     var input, filter, ul, li, a, i;
@@ -57,11 +54,12 @@ function search() {
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-            li[i].style.visibility ="visible";
-        } else {
             li[i].style.display = "none";
             li[i].style.visibility ="hidden";
+        } else {
+            li[i].style.display = "block";
+            li[i].style.visibility ="visible";
+            ul.style.display = "block";
         }
     }
 }

@@ -1,0 +1,123 @@
+@media only screen and (max-width:980px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,1lfr);
+    font-family: 'Open Sans', sans-serif;
+  }
+  .grid-container header {
+    grid-column: span 2;
+    background-color: pink;
+    text-align: justify;
+  }
+
+  #flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+
+  #flex-header a {
+    margin-right: 5%;
+
+    font-size: 3vh;
+    text-decoration: none;
+  }
+
+  #flex-header h1 {
+    font-size: 6vh;
+    margin-right: 10%;
+  }
+  .grid-container header > p {
+    font-size: 2vh;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .grid-container main {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .grid-container main > table {
+    width: 85%;
+    border: 2px solid black;
+    padding: 2vw;
+    margin-top: 10%;
+    font-size: 3vh;
+  }
+
+  caption {
+    text-align: left;
+    font-size: 3.5vh;
+    padding-bottom: 3%;
+    font-weight: 800;
+  }
+
+  tr {
+    border-bottom: 1px solid black;
+  }
+
+
+
+  .grid-container main {
+    grid-column: span 2;
+
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid black;
+    border-bottom: none;
+
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+  }
+
+  .column-1 {
+    flex: 1;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-2 {
+    flex: 1;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .column-1 p {
+    flex: 1;
+    text-align: left;
+    border-bottom: 1px solid black;
+  }
+
+  .column-2 p {
+    text-align: right;
+    border-bottom: 1px solid black;
+  }
+
+  .grid-container footer {
+    grid-column: span 2;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: lightgreen;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.grid-container footer > a {
+    color: white;
+    font-size: 3vh;
+    text-decoration: none;
+  }
+}

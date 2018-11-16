@@ -1,7 +1,7 @@
 @media only screen and (max-width:980px) {
 
   .grid-container footer {
-    grid-column: span 4;
+    grid-column: span 2;
 
     position: fixed;
     bottom: 0;
@@ -10,7 +10,7 @@
     height: 8vh;
     background-color: pink;
   }
-
+  
   nav {
     display: flex;
     flex-basis: auto;
@@ -20,7 +20,7 @@
     align-items: center;
   }
 
-  nav > a {
+  nav > figure > a {
     border: 3px solid black;
     cursor: pointer;
     display: inline-flex;
@@ -29,6 +29,7 @@
     align-self: stretch;
 
   }
+
   #glossary {
     flex: 1;
   }
@@ -42,7 +43,7 @@
     flex: 1;
   }
 
-  footer > nav > a > img {
+  footer > nav > figure  > a > img {
     max-height: 110%;
     max-width: 110%;
   }

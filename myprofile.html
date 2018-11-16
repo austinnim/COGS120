@@ -4,12 +4,64 @@
     <meta charset="UTF-8" />
     <title>Profile Page</title>
     <link rel="stylesheet" href="./navbar.css" type="text/css" />
+    <link rel="stylesheet" href="./myprofile.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <script src="./storage.js" type="text/javascript">This Page Requires Javascript</script>
   </head>
   <body>
-    <p> This page will serve as the profile page, where users are able to view their <br>
-    personal records, weight, and picture progress </p>
-    <footer>
-      <div class="navbar"><script src="nav.js"></script></nav>
-    </footer>
+    <div class="grid-container">
+
+      <!-- child -->
+      <button id="logout" type="button">Log out</button>
+      <!-- child -->
+      <header>
+        <img src="x.png" alt="profile picture">
+        <ul id="userInfo">
+          <li>Hello</li>
+          <li>Hello</li>
+        </ul>
+      </header>
+      <!-- child -->
+      <button id="program" type=button>Continue program </button>
+
+            <!-- child -->
+      <div id="opt1">
+          <button class="accordion" onclick="dropDownPics()">Picture Progress</button>
+          <div class="panel">
+            <div id="picGallery"></div>
+            <button id="newPic" type="button">Take a new picture</button>
+          </div>
+      </div>
+
+      <!-- child -->
+      <div id="opt2">
+        <button class="accordion" onclick="personalRecord()">Personal Records</button>
+        <div class="panel">
+          <p>CONTENT</p>
+        </div>
+      </div>
+      <!-- child -->
+      <footer>
+        <div class="navbar"><script src="nav.js"></script></nav>
+      </footer>
+  </div>
+
+    <!-- Login Page -->
+    <dialog id="loginPopup">
+      <h1> LOGIN </h1>
+      <form id="accountInfo" method="post">
+        <label for="user">Email
+          <input id="user" value="wert0321@aim.com" type="text" name="username" placeholder="ie: username@gmail.com"/>
+        </label>
+        <hr />
+        <label for="password">Password
+          <input id="password" value="testuser" type="text" name="password"/>
+        </label>
+        <hr />
+        <a href="signup.html">Sign Up </a>
+        <input id="close" type="button" name="close" value="close">
+        <input id="submitInfo" type="submit" value="submit" name="submit">
+      </form>
+    </dialog>
   </body>
 </html>

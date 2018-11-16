@@ -3,6 +3,8 @@
     display: grid;
     grid-template-columns: repeat(4 ,1fr);
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    justify-content: center;
   }
 
   /* 1st child of grid */
