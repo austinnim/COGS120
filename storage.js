@@ -13,39 +13,27 @@ Description: This file will hold the localStorage related functions.
 - store in array
 */
 /* Constructor for new person */
+
+/* Load for home page */
+
 function userProfile(email, password, name) {
   this.userEmail = email;
   this.userPass = password;
   this.userName = name;
   this.userPrograms = "";
-  this.userPics = new Array(3);
+  this.userPics = ["./SPONGEBOBLIFTINGPANTS.gif", "./SPONGEBOBLIFTINGPANTS.gif" ,"./SPONGEBOBLIFTINGPANTS.gif"]
 }
 
 /* Example User */
 var sampleUser = new userProfile("wert0321@aim.com", "testuser", "Austin Nim");
 sampleUser.userPrograms = "novice.html";
 localStorage.setItem("wert0321@aim.com", JSON.stringify(sampleUser));
-console.log("Properply stored = " + localStorage.getItem("wert0321@aim.com"));
-var currentUser = "";
-var currUserObj;
 
-/* Load for home page */
-window.addEventListener("load",
-function() {
-  // checks if a user is logged in
-  if (localStorage.getItem('loggedIn')){
-    document.getElementById("logout"),addEventListener("click", logout());
-    // if user is logged in then display their profile
-    loadProfile();
-  } else {
-    // if user is not logged in then prompt them to
-    //alert("Login to access your profile");
-    // create click events for the close and submit button
-    document.getElementById("submitInfo").addEventListener("click", validate(), true);
-    document.getElementById("close").addEventListener("click", closeBox(), true);
-    document.getElementById("loginPopup").showModal();
-  }
-}, true);
+console.log("Properply stored = " + localStorage.getItem(sampleUser.userEmail));
+
+/* Keep track of the user and the user object*/
+var currentUser;
+var currUserObj;
 
 /* Validate user input to see if they have an account */
 function validate() {
@@ -54,18 +42,20 @@ function validate() {
   var submit = document.getElementById("submitInfo");
   currentUser = document.getElementById("accountInfo").user;
   var password = document.getElementById("accountInfo").password;
-  var userObj = localStorage.getItem(currentUser);
+  currUserObj= localStorage.getItem(currentUser.value);
   // check if user has a profile
-  console.log("userObj = " + userObj);
-  if(userObj) {
-    currUserObj = JSON.parse(userObj);
-    localStorage.setItem("loggedIn", "true");
+  console.log(" in validate before password check currUserObj = " + currUserObj);
+  if(currUserObj) {
+    currUserObj = JSON.parse(currUserObj);
+    currentUser = currUserObj.userName;
     // check password => if pass != pass then say password is incorrect else reload page with profile
     if(currUserObj.userPass != password.value){
       alert ("Incorrect Password");
     } else {
-      loginBox.close();
+      localStorage.setItem("loggedIn", "true");
+      console.log("inside validate currUserObj = " + currUserObj);
       loadProfile();
+      console.log("   Submitted");
     }
   } else {
     alert("User account does not exist. Please retry typing your email, and if not please register a new account.");
@@ -73,29 +63,39 @@ function validate() {
 }
 
 function loadProfile (){
+  if(!currUserObj) {
+    return;
+  }
   console.log("ftn loadProfile()");
+  console.log("inside loadProfile currUserObj = " + currUserObj);
   var name = currUserObj.userName;
   document.getElementById("program").addEventListener("click",
     function (){
       window.location.href= currUserObj.userPrograms;
   });
-  console.log(" current user = " + currUserObj.userName);
-  console.log(" current user = " + currUserObj.userPics.length);
+  var picArray= currUserObj.userPics;
+  document.getElementById("userInfo")[0] = name;
+  document.getElementById("userInfo")[1] = "140 lbs";
+
   var pictures = document.getElementById("picGallery");
-  for (var i=0; i<(currUserObj.userPics).length; i++){
+  for (var i=0; i<picArray.length; i++){
     // extract every image stored in the array
     // create img tag
+    pictures.innerHTML = "<img>";
     // access each img tag by parent[X].src = userPics[X]
+    pictures[i].src = picArray[i];
   }
+  //console.log("reopening with new html");
+  //window.location.href= "./myprofile.html";
+  document.getElementById("loginPopup").close();
 }
 
 
 function closeBox() {
   console.log("ftn closeBox()");
-
   var loginBox = document.getElementById("loginPopup");
-  loginBox.close();
   var closeBtn = document.getElementById("close").addEventListener("click", function () {
+    loginBox.close();
     window.location.href = "./index.html";
   });
 }
@@ -121,7 +121,30 @@ function personalRecord() {
 }
 
 
+
 function logout() {
   console.log("ftn logout()");
   localStorage.removeItem("loggedIn");
+  console.log("LoggedIn = " + localStorage.getItem("loggedIn"));
+}
+
+window.onload = function(){
+  // checks if a user is logged in
+  if (localStorage.getItem('loggedIn')){
+    document.getElementById("logout"),addEventListener("click", logout(), true);
+    // if user is logged in then display their profile
+    loadProfile();
+  } else {
+    // if user is not logged in then prompt them to
+    //alert("Login to access your profile");
+    // create click events for the close and submit button
+    document.getElementById("loginPopup").showModal();
+    document.getElementById("loginPopup").style.display = "block";
+    document.getElementById("submitInfo").addEventListener("click", validate(), true);
+    document.getElementById("close").addEventListener("click", function () {
+    document.getElementById("loginPopup").style.display = "none";
+    document.getElementById("loginPopup").close();
+    }, true);
+  }
+  localStorage.clear();
 }

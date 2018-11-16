@@ -2,7 +2,6 @@
 
   .grid-container footer {
     grid-column: span 2;
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -10,12 +9,13 @@
     height: 8vh;
     background-color: pink;
   }
-  
+
   nav {
     display: flex;
     flex-basis: auto;
     align-self: stretch;
     height: 100%;
+    width:100%;
     justify-content: center;
     align-items: center;
   }
@@ -30,13 +30,25 @@
 
   }
 
+  nav > figure {
+    display: flex;
+    flex-basis: auto;
+    align-self: stretch;
+    height: 100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  figcaption {
+    margin-left: 1vw;
+  }
+
   #glossary {
     flex: 1;
   }
   #myprofile {
-    flex: 1;
-  }
-  #community {
     flex: 1;
   }
   #home {
