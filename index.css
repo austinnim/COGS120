@@ -69,7 +69,7 @@
   .flex-container figure > a > img {
     max-height: 100%;
     max-width: 100%;
-
+    background-color: black;
     border: 3px solid black;
   }
 

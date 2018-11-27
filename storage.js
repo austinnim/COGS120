@@ -26,11 +26,11 @@ function userProfile(email, password, name) {
 
 /* Example User */
 var sampleUser  = {
-    userEmail: 'some string value',
-    userPass: 2,
-    userName: false,
-    userPograms: "./advanced.html",
-    userPics: ["./SPONGEBOBLIFTINGPANTS.gif", "./SPONGEBOBLIFTINGPANTS.gif" ,"./SPONGEBOBLIFTINGPANTS.gif"],
+  userEmail: 'some string value',
+  userPass: 2,
+  userName: false,
+  userPograms: "./advanced.html",
+  userPics: ["./SPONGEBOBLIFTINGPANTS.gif", "./SPONGEBOBLIFTINGPANTS.gif" ,"./SPONGEBOBLIFTINGPANTS.gif"],
 };
 
 sampleUser.userPrograms = "novice.html";
@@ -82,19 +82,7 @@ function loadProfile (){
 }
 
 function dropDownPics() {
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-              panel.style.display = "none";
-          } else {
-              panel.style.display = "block";
-          }
-      });
-  }
+
 }
 
 function personalRecord() {
@@ -102,15 +90,7 @@ function personalRecord() {
 }
 
 function newPicture() {
-  const supported = 'mediaDevices' in navigator;
-  if(supported){
-
-  } else {
-    alert("Sorry this feature isn't supported in the current browser");
-  }
-}
-
-(function() {
+  /* Run this function once the according for taking new picture is displayed */
   var width = 320;    // We will scale the photo width to this
   var height = 0;     // This will be computed based on the input stream
 
@@ -119,25 +99,23 @@ function newPicture() {
   var video = null;
   var canvas = null;
   var photo = null;
-  var startbutton = null;
-}
+  var captureBtn = null;
 
-function startup() {
+  function startup() {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
-}
-
-navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+    captureBtn = document.getElementById('captureButton');
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(function(stream) {
-        video.srcObject = stream;
-        video.play();
+      video.srcObject = stream;
+      video.play();
     })
     .catch(function(err) {
-        console.log("An error occurred! " + err);
+      console.log("An error occurred! " + err);
     });
-video.addEventListener('canplay', function(ev){
+
+    video.addEventListener('canplay', function(ev){
       if (!streaming) {
         height = video.videoHeight / (video.videoWidth/width);
 
@@ -149,12 +127,13 @@ video.addEventListener('canplay', function(ev){
       }
     }, false);
 
-    startbutton.addEventListener('click', function(ev){
-          takepicture();
-          ev.preventDefault();
-        }, false);
-        clearphoto();
+    captureBtn.addEventListener('click', function(ev){
+      takepicture();
+      ev.preventDefault();
+    }, false);
+    clearphoto();
   }
+
   function clearphoto() {
     var context = canvas.getContext('2d');
     context.fillStyle = "#AAA";
@@ -164,42 +143,59 @@ video.addEventListener('canplay', function(ev){
     photo.setAttribute('src', data);
   }
   function takepicture() {
-      var context = canvas.getContext('2d');
-      if (width && height) {
-        canvas.width = width;
-        canvas.height = height;
-        context.drawImage(video, 0, 0, width, height);
+    var context = canvas.getContext('2d');
+    if (width && height) {
+      canvas.width = width;
+      canvas.height = height;
+      context.drawImage(video, 0, 0, width, height);
 
-        var data = canvas.toDataURL('image/png');
-        photo.setAttribute('src', data);
-      } else {
-        clearphoto();
-      }
+      var data = canvas.toDataURL('image/png');
+      photo.setAttribute('src', data);
+    } else {
+      clearphoto();
     }
-)
+  }
+}
 /* Once the doc has loaded create t*/
 $(document).ready(function(){
   $("#logout").hide();
   // check to see if user is logged in
   if (localStorage.getItem('loggedIn')){
     // if the user is logged in then load profile
-    loadProfile();
+    loadProfile(); // this is supposed to grab all relevant data for the users profile
+    // creates the accordion => makes things collapsable
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    // show the logout button for users
     $("#logout").show();
+    // show the users program
     $("#program").show();
+    // will log the user out and redirect them to the home page
     $("#logout").click(function (){
       console.log("Logging out");
       localStorage.removeItem("loggedIn");
       $("#logout").hide();
       window.location.href = "./index.html";
     });
+    // will redirect the user back to their program page
     $("#program").click(function (){
-      $("#logout").hide();
       window.location.href= currUserObj.userPrograms;
     });
+    // will call upon the function new picture that runs sub functions to capture an image
     $("#newPic").click(function(){
       newPicture();
     });
-
   } else {
     // if user is not logged in then prompt them to
     alert("Login to access your profile");

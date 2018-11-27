@@ -13,7 +13,6 @@ $(document).ready(function() {
           showSlides(1,0);
       }
   });
-
   acc[1].addEventListener("click", function(){
       this.classList.toggle("active");
       var panelList = document.getElementsByClassName("panel");
