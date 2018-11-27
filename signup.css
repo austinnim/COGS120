@@ -1,7 +1,7 @@
 @media only screen and (max-width: 980px) {
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(4 ,1fr);
+    grid-template-columns: repeat(2 ,1fr);
     font-family: 'Open Sans', sans-serif;
   }
 
@@ -15,7 +15,7 @@
    font-weight: 800;
  }
 
- .grid-container header > a {
+ header > a {
    text-decoration: none;
    text-align: right;
    margin-right: 10%;

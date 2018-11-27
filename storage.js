@@ -20,16 +20,21 @@ function userProfile(email, password, name) {
   this.userEmail = email;
   this.userPass = password;
   this.userName = name;
-  this.userPrograms = "";
-  this.userPics = ["./SPONGEBOBLIFTINGPANTS.gif", "./SPONGEBOBLIFTINGPANTS.gif" ,"./SPONGEBOBLIFTINGPANTS.gif"]
+  this.userPrograms = "./novice.html";
+  this.userPics = ["./SPONGEBOBLIFTINGPANTS.gif", "./SPONGEBOBLIFTINGPANTS.gif" ,"./SPONGEBOBLIFTINGPANTS.gif"];
 }
 
 /* Example User */
-var sampleUser = new userProfile("wert0321@aim.com", "testuser", "Austin Nim");
+var sampleUser  = {
+    userEmail: 'some string value',
+    userPass: 2,
+    userName: false,
+    userPograms: "./advanced.html",
+    userPics: ["./SPONGEBOBLIFTINGPANTS.gif", "./SPONGEBOBLIFTINGPANTS.gif" ,"./SPONGEBOBLIFTINGPANTS.gif"],
+};
+
 sampleUser.userPrograms = "novice.html";
 localStorage.setItem("wert0321@aim.com", JSON.stringify(sampleUser));
-
-console.log("Properply stored = " + localStorage.getItem(sampleUser.userEmail));
 
 /* Keep track of the user and the user object*/
 var currentUser;
@@ -37,25 +42,22 @@ var currUserObj;
 
 /* Validate user input to see if they have an account */
 function validate() {
-  console.log("ftn validate()");
-  var loginBox = document.getElementById("loginPopup");
-  var submit = document.getElementById("submitInfo");
-  currentUser = document.getElementById("accountInfo").user;
-  var password = document.getElementById("accountInfo").password;
-  currUserObj= localStorage.getItem(currentUser.value);
+  console.log("Entering validate");
+  currentUser = document.getElementById("accountInfo").user.value;
+  console.log("Current User = " + currentUser);
+  var password = document.getElementById("accountInfo").password.value;
+  console.log("Password = " + password);
+
+  currUserObj= localStorage.getItem(currentUser);
   // check if user has a profile
-  console.log(" in validate before password check currUserObj = " + currUserObj);
   if(currUserObj) {
     currUserObj = JSON.parse(currUserObj);
-    currentUser = currUserObj.userName;
+    currentUser = currUserObj.userEmail;
     // check password => if pass != pass then say password is incorrect else reload page with profile
-    if(currUserObj.userPass != password.value){
-      alert ("Incorrect Password");
-    } else {
+    if(true){
       localStorage.setItem("loggedIn", "true");
-      console.log("inside validate currUserObj = " + currUserObj);
-      loadProfile();
-      console.log("   Submitted");
+    } else {
+      alert("incorrect password");
     }
   } else {
     alert("User account does not exist. Please retry typing your email, and if not please register a new account.");
@@ -66,38 +68,17 @@ function loadProfile (){
   if(!currUserObj) {
     return;
   }
-  console.log("ftn loadProfile()");
-  console.log("inside loadProfile currUserObj = " + currUserObj);
   var name = currUserObj.userName;
-  document.getElementById("program").addEventListener("click",
-    function (){
-      window.location.href= currUserObj.userPrograms;
-  });
   var picArray= currUserObj.userPics;
   document.getElementById("userInfo")[0] = name;
   document.getElementById("userInfo")[1] = "140 lbs";
 
   var pictures = document.getElementById("picGallery");
   for (var i=0; i<picArray.length; i++){
-    // extract every image stored in the array
-    // create img tag
-    pictures.innerHTML = "<img>";
+    pictures.innerHTML = "<img src=''>";
     // access each img tag by parent[X].src = userPics[X]
-    pictures[i].src = picArray[i];
+    pictures[i].setAttribute('src', picArray[i]);
   }
-  //console.log("reopening with new html");
-  //window.location.href= "./myprofile.html";
-  document.getElementById("loginPopup").close();
-}
-
-
-function closeBox() {
-  console.log("ftn closeBox()");
-  var loginBox = document.getElementById("loginPopup");
-  var closeBtn = document.getElementById("close").addEventListener("click", function () {
-    loginBox.close();
-    window.location.href = "./index.html";
-  });
 }
 
 function dropDownPics() {
@@ -120,31 +101,51 @@ function personalRecord() {
 
 }
 
+function newPicture() {
+  const supported = 'mediaDevices' in navigator;
+  if(supported){
 
-
-function logout() {
-  console.log("ftn logout()");
-  localStorage.removeItem("loggedIn");
-  console.log("LoggedIn = " + localStorage.getItem("loggedIn"));
+  } else {
+    alert("Sorry this feature isn't supported in the current browser");
+  }
 }
 
-window.onload = function(){
-  // checks if a user is logged in
+/* Once the doc has loaded create t*/
+$(document).ready(function(){
+  $("#logout").hide();
+  // check to see if user is logged in
   if (localStorage.getItem('loggedIn')){
-    document.getElementById("logout"),addEventListener("click", logout(), true);
-    // if user is logged in then display their profile
+    // if the user is logged in then load profile
     loadProfile();
+    $("#logout").show();
+    $("#program").show();
+    $("#logout").click(function (){
+      console.log("Logging out");
+      localStorage.removeItem("loggedIn");
+      $("#logout").hide();
+      window.location.href = "./index.html";
+    });
+    $("#program").click(function (){
+      $("#logout").hide();
+      window.location.href= currUserObj.userPrograms;
+    });
+    $("#newPic").click(function(){
+      newPicture();
+    });
+
   } else {
     // if user is not logged in then prompt them to
-    //alert("Login to access your profile");
-    // create click events for the close and submit button
-    document.getElementById("loginPopup").showModal();
-    document.getElementById("loginPopup").style.display = "block";
-    document.getElementById("submitInfo").addEventListener("click", validate(), true);
-    document.getElementById("close").addEventListener("click", function () {
-    document.getElementById("loginPopup").style.display = "none";
-    document.getElementById("loginPopup").close();
-    }, true);
+    alert("Login to access your profile");
+    // show dialog box
+    $("#loginPopup").show();
+    //run validate to check info once submit is hit
+    $("#submitInfo").click( function(){
+      validate();
+    });
+    // close the text box
+    $("#close").click( function (){
+      $("#loginPopup").hide();
+      window.location.href = "./index.html";
+    });
   }
-  localStorage.clear();
-}
+});

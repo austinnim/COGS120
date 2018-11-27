@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="./navbar.css" type="text/css" />
   <link rel="stylesheet" href="./myprofile.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-  <script src="./storage.js" type="text/javascript">This Page Requires Javascript</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./storage.js" type="text/javascript"><!--This Page Requires Javascript--></script>
 </head>
 <body>
   <div class="grid-container">
-
     <!-- child -->
     <button id="logout" type="button">Log out</button>
     <!-- child -->
@@ -29,7 +29,7 @@
       <button class="accordion" onclick="dropDownPics()">Picture Progress</button>
       <div class="panel">
         <div id="picGallery"></div>
-        <button id="newPic" type="button">Take a new picture</button>
+        <button id="newPic" type="button">Take A Picture</button>
       </div>
     </div>
 
@@ -53,7 +53,7 @@
         <figure>
           <a href="./myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><figcaption>myProfile</figcaption></a>
         </figure>
-      </nav>;
+      </nav>
     </footer>
   </div>
 
@@ -61,17 +61,19 @@
   <dialog id="loginPopup">
     <h1> LOGIN </h1>
     <form id="accountInfo" method="post">
-      <label for="user">Email
+      <label for="user">Email:
         <input id="user" value="wert0321@aim.com" type="text" name="username" placeholder="ie: username@gmail.com"/>
       </label>
       <hr />
-      <label for="password">Password
+      <label for="password">Password:
         <input id="password" value="testuser" type="text" name="password"/>
       </label>
       <hr />
-      <a href="signup.html">Sign Up </a>
-      <input id="close" type="button" name="close" value="close">
-      <input id="submitInfo" type="submit" value="submit" name="submit">
+      <div id="options">
+        <a href="signup.html">Sign Up </a>
+        <input id="close" type="button" name="close" value="close">
+        <input id="submitInfo" type="submit" value="submit" name="submit">
+      </div>
     </form>
   </dialog>
 </body>
