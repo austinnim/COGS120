@@ -28,7 +28,18 @@
     <div id="opt1">
       <button class="accordion" onclick="dropDownPics()">Picture Progress</button>
       <div class="panel">
-        <div id="picGallery"></div>
+        <div id="picGallery">
+          <img src="" />
+        </div>
+        <div class="camera">
+          <video id="video">Video stream not available.</video>
+        <button id="startbutton">Take photo</button>
+        </div>
+        <canvas id="canvas">
+  </canvas>
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </div>
         <button id="newPic" type="button">Take A Picture</button>
       </div>
     </div>
