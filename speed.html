@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <base href="./" />
     <meta charset="UTF-8" />
     <title>Speed Program Page</title>
     <link rel="stylesheet" href="programs.css" type="text/css" />
@@ -8,13 +9,34 @@
   </head>
   </head>
   <body>
-    <a href="./cardio.html">Previous Page (Cardio)</a>
+    <div class="grid-container">
+      <header>
+        <div id="flex-header">
+          <a href="cardio.html">&#10229;</a>
+          <h1>Speed</h1>
+        </div>
+        <p>Description of workout: wow wow wow wow wow wow wow wow wow wow wow</p>
+        <p>Length of Workout: X weeks</p>
+      </header>
 
-    <p> This is the home page for a speed increasing workout program, where there will be a list of exercises.
-      In addition, exercises will be tabs that expand with details of how to perform the exercise
-      and why it's a chosen exercise. </p>
-    <footer>
-      <div class="navbar"><script src="nav.js"></script></nav>
-    </footer>
+      <main>
+        <div class="column-1">
+          <p> Exercise 1 </p>
+          <p> Exercise 2 </p>
+          <p> Exercise 3 </p>
+          <p> Exercise 4 </p>
+        </div>
+        <div class="column-2">
+          <p> # of Reps </p>
+          <p> # of Reps </p>
+          <p> # of Reps </p>
+          <p> # of Reps </p>
+        </div>
+      </main>
+
+      <footer>
+        <a href="myprofile.html">START PROGRAM</a>
+      </footer>
+    </div>
   </body>
 </html>
