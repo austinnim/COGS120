@@ -1,21 +1,5 @@
-/*
-File: Storage.js
-Description: This file will hold the localStorage related functions.
-- myProfile
-- Needs to evaluate if the user is logged in
-- local storage check
-- Needs to be able to edit information
-- setItem w/ parse & stringify
-- Needs to be able to store photos and take photos
-- parse & stringify?
-- MediaDevices.getUserMedia
-- Needs to maintain account information
-- store in array
-*/
+
 /* Constructor for new person */
-
-/* Load for home page */
-
 function userProfile(email, password, name) {
   this.userEmail = email;
   this.userPass = password;
@@ -56,6 +40,7 @@ function validate() {
     // check password => if pass != pass then say password is incorrect else reload page with profile
     if(true){
       localStorage.setItem("loggedIn", "true");
+      loadProfile();
     } else {
       alert("incorrect password");
     }
@@ -68,29 +53,41 @@ function loadProfile (){
   if(!currUserObj) {
     return;
   }
-  var name = currUserObj.userName;
   var picArray= currUserObj.userPics;
-  document.getElementById("userInfo")[0] = name;
-  document.getElementById("userInfo")[1] = "140 lbs";
+  var accInfo = document.getElementById("userInfo");
+  accInfo.innerHTML = "<li>" + currUserObj.userName + "</li>";
+
 
   var pictures = document.getElementById("picGallery");
   for (var i=0; i<picArray.length; i++){
     pictures.innerHTML = "<img src=''>";
     // access each img tag by parent[X].src = userPics[X]
+
     pictures[i].setAttribute('src', picArray[i]);
   }
-}
-
-function dropDownPics() {
-
 }
 
 function personalRecord() {
 
 }
 
+
+function imageLoader() {
+   var reader = new FileReader();
+   reader.onload = function(event) {
+     img = new Image();
+     img.onload = function(){
+       ctx.drawImage(img,0,0);
+     }
+     img.src = reader.result;
+     currUserObj.userPics.push(reader.result);
+   }
+   reader.readAsDataURL(fileInput.files[0]);
+  }
+
+/*
 function newPicture() {
-  /* Run this function once the according for taking new picture is displayed */
+  // Run this function once the according for taking new picture is displayed
   var width = 320;    // We will scale the photo width to this
   var height = 0;     // This will be computed based on the input stream
 
@@ -156,6 +153,8 @@ function newPicture() {
     }
   }
 }
+*/
+
 /* Once the doc has loaded create t*/
 $(document).ready(function(){
   $("#logout").hide();
@@ -177,6 +176,9 @@ $(document).ready(function(){
         }
       });
     }
+
+    //var fileInput = document.getElementById('fileInput');
+    //fileInput.addEventListener('change', imageLoader(), false);
     // show the logout button for users
     $("#logout").show();
     // show the users program
@@ -184,6 +186,7 @@ $(document).ready(function(){
     // will log the user out and redirect them to the home page
     $("#logout").click(function (){
       console.log("Logging out");
+      localStorage.setItem(currUserObj.userEmail, JSON.stringify(currUserObj));
       localStorage.removeItem("loggedIn");
       $("#logout").hide();
       window.location.href = "./index.html";
@@ -196,6 +199,36 @@ $(document).ready(function(){
     $("#newPic").click(function(){
       newPicture();
     });
+    $('input#fileContainer').on('change', function () {
+    console.log(this);
+
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        console.log(reader.result + '->' + typeof reader.result)
+        var thisImage = reader.result;
+        localStorage.setItem("imgData", thisImage);
+    };
+    reader.readAsDataURL(this.files[0]);
+});
+
+
+$('input#show').click(function () {
+    var dataImage = localStorage.getItem('imgData');
+    console.log(dataImage);
+    var imgCtr = $('<img/>').prop('src', dataImage);
+    $('div#imgContainer').append(imgCtr);
+});
+  $("#Add").click(function (){
+    console.log("clicked submit");
+    var exercise = $("#lift").value;
+    var record = $("#weight").value;
+    console.log("record = " + record);
+    var node = document.createElement("Li");
+    var text = "<li>" + exercise + " == " + record + "</li>";
+    var textnode=document.createTextNode(text);
+    node.appendChild(textnode);
+    document.getElementById("list").appendChild(node);
+  });
   } else {
     // if user is not logged in then prompt them to
     alert("Login to access your profile");

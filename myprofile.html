@@ -17,17 +17,23 @@
     <header>
       <img src="profile.png" alt="profile picture">
       <ul id="userInfo">
-        <li></li>
-        <li></li>
+
       </ul>
     </header>
+
     <!-- child -->
-    <button id="program" type=button>Continue program </button>
+    <div id="ctnProgButton">
+      <button id="program" type=button>Continue program </button>
+    </div>
 
     <!-- child -->
     <div id="opt1">
       <button class="accordion">Picture Progress</button>
       <div class="panel">
+        <input id="fileContainer" type="file">
+        <input id="show" type="button" value="Show">
+        <div id="imgContainer"></div>
+        <!--
         <div id="picGallery">
           <img src="" />
         </div>
@@ -36,10 +42,11 @@
         <button id="captureButton">Take photo</button>
         </div>
         <canvas id="canvas">
-         </canvas>
+        </canvas>
   <div class="output">
     <img id="photo" alt="The screen capture will appear in this box.">
   </div>
+  -->
         <button id="newPic" type="button">Take A Picture</button>
       </div>
     </div>
@@ -47,11 +54,13 @@
     <!-- child -->
     <div id="opt2">
       <button class="accordion" onclick="personalRecord()">Personal Records</button>
-      <div class="panel">
-        <p>Deadlift = 140</p>
-        <p>Squat = 150 </p>
-        <button>Edit Records</button>
-        <button>Save Edit</button>
+      <div class="panel" id="personalRec">
+        <input id="lift" type="text" placeholder ="Exercise">
+        <input id="weight" type="text" placeholder="Weight in KG/LB">
+        <input type='button' value='add to list' id='Add' />
+        <ul id='list'></ul>
+        <button id="edit">Edit Records</button>
+
       </div>
     </div>
     <!-- child -->
