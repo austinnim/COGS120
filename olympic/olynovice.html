@@ -38,10 +38,12 @@
             chose.addEventListener("click", function(){
               var currUser = localStorage.getItem("currentUser");
               var currUserObj = localStorage.getItem(currUser);
-              currUserObj= JSON.parse(currUserObj);
-              currUserObj.userPrograms = "./olympic/olynovicedetails.html";
+              currUserObj = JSON.parse(currUserObj);
+              if(currUserObj.progName === "") {
+                  currUserObj.userPrograms = "./olympic/olynovicedetails.html";
+                  currUserObj.progName = "Olympic Lifting - Novice";
+              }
               window.location.href = "./olynovicedetails.html"
-              currUserObj.progName = "Olympic Lifting - Novice";
             });
           </script>
         </footer>

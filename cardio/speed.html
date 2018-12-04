@@ -41,9 +41,11 @@
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);
-            currUserObj.userPrograms = "./cardio/speeddetails.html";
+            if(currUserObj.progName === "") {
+                currUserObj.userPrograms = "./cardio/speeddetails.html";
+                currUserObj.progName = "Cardio - Speed";
+            }
             window.location.href = "./speeddetails.html"
-            currUserObj.progName = "Cardio - Speed";
           });
         </script>
       </footer>

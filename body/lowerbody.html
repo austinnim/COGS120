@@ -40,9 +40,11 @@
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);
-            currUserObj.userPrograms = "./body/lowerbodydetails.html";
+            if(currUserObj.progName === "") {
+              currUserObj.userPrograms = "./body/lowerbodydetails.html";
+              currUserObj.progName = "Body Buidling - Lower Body";
+            }
             window.location.href = "./lowerbodydetails.html"
-            currUserObj.progName = "Body Buidling - Lower Body";
           });
         </script>
       </footer>

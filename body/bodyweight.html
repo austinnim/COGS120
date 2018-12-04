@@ -41,9 +41,11 @@
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);
-            currUserObj.userPrograms = "./body/bodyweightdetails.html";
+            if(currUserObj.progName === "") {
+              currUserObj.userPrograms = "./body/bodyweightdetails.html";
+              currUserObj.progName = "Body Buidling - Body Weight";
+            }
             window.location.href = "./bodyweightdetails.html"
-            currUserObj.progName = "Body Buidling - Body Weight";
           });
         </script>
       </footer>

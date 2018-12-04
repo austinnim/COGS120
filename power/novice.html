@@ -39,9 +39,13 @@
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);
-            currUserObj.userPrograms = "./power/novicedetails.html";
+            if(currUserObj.progName === "") {
+
+                currUserObj.userPrograms = "./power/novicedetails.html";
+
+                currUserObj.progName = "Power Lifting - Novice";
+            }
             window.location.href = "./novicedetails.html"
-            currUserObj.progName = "Power Lifting - Novice";
           });
         </script>
       </footer>

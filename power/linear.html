@@ -40,9 +40,14 @@
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);
-            currUserObj.userPrograms = "./power/lineardetails.html";
+            if(currUserObj.progName === "") {
+
+                currUserObj.userPrograms = "./power/lineardetails.html";
+
+                currUserObj.progName = "Power Lifting - Linear";
+
+            }
             window.location.href = "./lineardetails.html"
-            currUserObj.progName = "Power Lifting - Linear";
           });
         </script>
       </footer>

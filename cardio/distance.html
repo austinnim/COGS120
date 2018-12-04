@@ -39,9 +39,11 @@
               var currUser = localStorage.getItem("currentUser");
               var currUserObj = localStorage.getItem(currUser);
               currUserObj= JSON.parse(currUserObj);
-              currUserObj.userPrograms = "./cardio/distancedetails.html";
+              if(currUserObj.progName === "") {
+                  currUserObj.userPrograms = "./power/distancedetails.html";
+                  currUserObj.progName = "Cardio - Distance";
+              }
               window.location.href = "./distancedetails.html"
-              currUserObj.progName = "Cardio - Distance";
             });
           </script>
         </footer>

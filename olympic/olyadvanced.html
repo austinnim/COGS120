@@ -39,9 +39,11 @@
               var currUser = localStorage.getItem("currentUser");
               var currUserObj = localStorage.getItem(currUser);
               currUserObj= JSON.parse(currUserObj);
-              currUserObj.userPrograms = "./olympic/olyadvanceddetails.html";
+              if(currUserObj.progName === "") {
+                  currUserObj.userPrograms = "./olympic/olyadvanceddetails.html";
+                  currUserObj.progName = "Olympic Lifting - Advanced";
+              }
               window.location.href = "./olyadvanceddetails.html"
-              currUserObj.progName = "Olympic Lifting - Advanced";
             });
           </script>
         </footer>
