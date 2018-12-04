@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calisthenics Program Page</title>
+    <link rel="stylesheet" href="../css/programs.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <div id="flex-header">
+          <a href="./bodybuilding.html">&#10229;</a>
+          <h1> Calisthenics </h1>
+        </div>
+        <p>Description of workout: wow wow wow wow wow wow wow wow wow wow wow</p>
+        <p>Length of Workout: X weeks</p>
+      </header>
+
+      <main>
+        <div class="column-1">
+          <p> Exercise 1 </p>
+          <p> Exercise 2 </p>
+          <p> Exercise 3 </p>
+          <p> Exercise 4 </p>
+        </div>
+        <div class="column-2">
+          <p> # of Reps </p>
+          <p> # of Reps </p>
+          <p> # of Reps </p>
+          <p> # of Reps </p>
+        </div>
+      </main>
+
+      <!-- redirect to program details -->
+      <footer>
+        <button type="button" id="chosenprogram">START PROGRAM</button>
+        <script>
+          var chosen = document.getElementById("chosenprogram");
+          chose.addEventListener("click", function(){
+            var currUser = localStorage.getItem("currentUser");
+            var currUserObj = localStorage.getItem(currUser);
+            currUserObj= JSON.parse(currUserObj);
+            currUserObj.userPrograms = "./body/bodyweightdetails.html";
+            window.location.href = "./bodyweightdetails.html"
+            currUserObj.progName = "Body Buidling - Body Weight";
+          });
+        </script>
+      </footer>
+    </div>
+  </body>
+</html>

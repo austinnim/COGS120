@@ -1,0 +1,140 @@
+@media only screen and (max-width:980px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    align-items: center;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid-container header{
+    grid-column-end: 4;
+    grid-column-start:2;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .largelink {
+    text-decoration: none;
+    margin-left: 1%;
+    font-size: 2vh;
+    float: left;
+    margin-right: 20px;
+  }
+
+  #powerheader {
+    background-image: linear-gradient(blue, green);
+    margin-right:0;
+    font-size: 5vh;
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 15px;
+  }
+  #olyheader {
+    background-image: linear-gradient(red, orange);
+    margin-right:0;
+    font-size: 5vh;
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 15px;
+  }
+  #bodybuildheader{
+    background-image: linear-gradient(green, orange);
+    margin-right:0;
+    font-size: 5vh;
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 15px;
+  }
+  #cardioheader{
+    background-image: linear-gradient(blue, red);
+  }
+
+  .grid-container header > a {
+    text-decoration: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    font-size: 5vh;
+  }
+
+  .grid-container header > h1 {
+    margin-right: 20%;
+    font-size: 6vh;
+    background-color: black;
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  #choice{
+    text-align: center;
+    font-size: 1.5vh;
+    margin-top: 20px;
+  }
+  .grid-container p {
+    grid-column: span 4;
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+    text-align: center;
+    font-size: 2vh;
+    font-weight: 800;
+  }
+
+
+  .flex-container {
+    grid-column: span 4;
+
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: baseline;
+
+    margin-bottom: 20%;
+    margin-top: 10%;
+  }
+
+  .flex-container figure {
+    height: 25%;
+    width: 25%;
+    margin: 3%;
+  }
+
+  .flex-container figure > a > img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .bodyIcons  img {
+    background-image: linear-gradient(green, orange);
+
+  }
+  .powerIcons img {
+    background-image: linear-gradient(blue, green);
+  }
+  .cardioIcons img {
+    background-image: linear-gradient(blue, red);
+  }
+  .olympicIcons img {
+    background-image: linear-gradient(red, orange);
+  }
+
+  .flex-container figure > figcaption {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 5%;
+  }
+}

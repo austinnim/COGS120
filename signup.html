@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sign-up Page</title>
-    <base href="./" />
-    <link rel="stylesheet" href="signup.css" type="text/css" />
+    <link rel="stylesheet" href="./css/signup.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-    <script src="storage.js"></script>
-    <script src="signup.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/signup.js"></script>
   </head>
   <body>
     <div class="grid-container">
@@ -18,18 +17,15 @@
 
       <form id="account-info"method="post">
         <label for="name">Name<input id="name" type="text" name="fullname" /></label>
-        <hr />
+
         <label for="email">Email<input id="email" type="text" name="email"/></label>
-        <hr />
+
         <label for="password">Password<input id="password" type="text" name="password" /></label>
-        <hr />
+
         <label for="confirmPass">Confirm Password<input id="confirmPass" type="text" name="confirmPass" /></label>
-        <hr />
         <button id="signup" type="submit">Sign-up</button>
       </form>
 
-      <footer>
-      </footer>
     </div>
   </body>
 </html>

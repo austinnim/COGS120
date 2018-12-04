@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <base href="./" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="navbar.css" text="text/css" />
-    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="stylesheet" href="css/navbar.css" text="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   </head>
   <body>
@@ -17,41 +17,33 @@
       </header>
 
       <!-- 2nd child -->
-      <p> What health goals do you want to work on? </p>
+      <p id="statement"> What health goals do you want to work on? </p>
 
       <!-- 3rd child -->
       <main class="flex-container">
         <figure>
-          <a href="cardio.html"><img src="running.png" alt="Cardio Icon"></a>
+          <a href="cardio/cardio.html"><img id="cardioIcon" src="cardio/running.png" alt="Cardio Icon"></a>
           <figcaption> Cardio </figcaption>
         </figure>
         <figure>
-          <a href="powerlifting.html"><img src="deadlift.png" alt="Powerlifting Icon"></a>
+          <a href="power/powerlifting.html"><img id="powerIcon" src="power/deadlift.png" alt="Powerlifting Icon"></a>
           <figcaption> Powerlifting </figcaption>
         </figure>
         <figure>
-          <a href="bodybuilding.html"><img src="buff.png" alt="bodybuilding Icon"></a>
+          <a href="body/bodybuilding.html"><img id="bodyIcon" src="body/buff.png" alt="Bodybuilding Icon"></a>
           <figcaption> Body Building </figcaption>
         </figure>
         <figure>
-          <a href="olympiclifting.html"><img src="snatch.png" alt="Olympic Lifting Icon"></a>
+          <a href="olympic/olympiclifting.html"><img id="olympicIcon" src="olympic/snatch.png" alt="Olympic Lifting Icon"></a>
           <figcaption> Olympic Lifting </figcaption>
         </figure>
       </main>
 
       <!-- 4th child -->
-      <footer>
-        <nav>
-          <figure>
-            <a href="./index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><figcaption>Home</figcaption></a>
-          </figure>
-          <figure>
-            <a href="./glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><figcaption>Glossay</figcaption> </a>
-          </figure>
-          <figure>
-            <a href="./myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><figcaption>myProfile</figcaption></a>
-          </figure>
-        </nav>
+      <footer id="navbar">
+            <a href="index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
+            <a href="glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
+            <a href="myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
       </footer>
 
     </div> <!-- End of container(grid) -->

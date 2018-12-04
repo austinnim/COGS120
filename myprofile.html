@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Profile Page</title>
-  <link rel="stylesheet" href="./navbar.css" type="text/css" />
-  <link rel="stylesheet" href="./myprofile.css" type="text/css">
+  <link rel="stylesheet" href="./css/navbar.css" type="text/css" />
+  <link rel="stylesheet" href="./css/myprofile.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./storage.js" type="text/javascript"><!--This Page Requires Javascript--></script>
+  <script src="./js/user.js" type="text/javascript"></script>
+  <script src="./js/storage.js" type="text/javascript"><!--This Page Requires Javascript--></script>
 </head>
 <body>
   <div class="grid-container">
@@ -15,7 +16,7 @@
     <button id="logout" type="button">Log out</button>
     <!-- child -->
     <header>
-      <img src="profile.png" alt="profile picture">
+      <img id="profilePic" src="" alt="profile picture">
       <ul id="userInfo">
 
       </ul>
@@ -33,21 +34,6 @@
         <input id="fileContainer" type="file">
         <input id="show" type="button" value="Show">
         <div id="imgContainer"></div>
-        <!--
-        <div id="picGallery">
-          <img src="" />
-        </div>
-        <div class="camera">
-          <video id="video">Video stream not available.</video>
-        <button id="captureButton">Take photo</button>
-        </div>
-        <canvas id="canvas">
-        </canvas>
-  <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
-  </div>
-  -->
-        <button id="newPic" type="button">Take A Picture</button>
       </div>
     </div>
 
@@ -55,28 +41,21 @@
     <div id="opt2">
       <button class="accordion" onclick="personalRecord()">Personal Records</button>
       <div class="panel" id="personalRec">
-        <input id="lift" type="text" placeholder ="Exercise">
-        <input id="weight" type="text" placeholder="Weight in KG/LB">
-        <input type='button' value='add to list' id='Add' />
+        <div id="userInput">
+        <label>Exercise:<input id="lift" type="text" placeholder ="Exercise"></label></br>
+        <label>Weight Lifted:<input id="weight" type="text" placeholder="Weight in KG/LB"></label>
         <ul id='list'></ul>
+        <button type='button' value='add to list' id='Add' > Add</button>
         <button id="edit">Edit Records</button>
+      </div>
 
       </div>
     </div>
     <!-- child -->
     <footer id="navbar">
-      <!-- script src="nav.js"></script> -->
-      <nav>
-        <figure>
-          <a href="./index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><figcaption>Home</figcaption></a>
-        </figure>
-        <figure>
-          <a href="./glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><figcaption>Glossay</figcaption> </a>
-        </figure>
-        <figure>
-          <a href="./myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><figcaption>myProfile</figcaption></a>
-        </figure>
-      </nav>
+          <a href="index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
+          <a href="glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
+          <a href="myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
     </footer>
   </div>
 
@@ -89,7 +68,7 @@
       </label>
       <hr />
       <label for="password">Password:
-        <input id="password" value="testuser" type="text" name="password"/>
+        <input id="password" value="wert0321" type="text" name="password"/>
       </label>
       <hr />
       <div id="options">
@@ -99,5 +78,7 @@
       </div>
     </form>
   </dialog>
+
+  <!-- Signup Page -->
 </body>
 </html>

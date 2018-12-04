@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <base href="./" />
   <title>Glossary Page</title>
-  <link rel="stylesheet" href="navbar.css" text="text/css" />
-  <link rel="stylesheet" href="glossary.css" text="text/css">
+  <link rel="stylesheet" href="css/navbar.css" text="text/css" />
+  <link rel="stylesheet" href="css/glossary.css" text="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="glossary.js">This page requires javascript</script>
+  <script type="text/javascript" src="js/glossary.js">This page requires javascript</script>
 </head>
 <body>
   <div class="grid-container">
@@ -19,14 +19,9 @@
     <div id="searchBar">
       <input type="text" id="myInput" onkeyup="search()" placeholder="Search for terms" />
       <ul id="myUL">
-        <li><a href="pull.html">bodybuilding-Pull</a></li>
-        <li><a href="pull.html">bodybuilding-Back</a></li>
-        <li><a href="push.html">bodybuilding-Push</a></li>
-        <li><a href="upperbody.html">bodybuilding-Upperbody</a></li>
-
-        <li><a href="strength.html">Powerlifting-Strength</a></li>
-        <li><a href="linear.html">Powerlifiting-Linear</a></li>
-        <li><a href="keizen.html">Powerlifting-Keizen </a></li>
+        <li><a href="power/strength.html">Powerlifting-Strength</a></li>
+        <li><a href="power/linear.html">Powerlifiting-Linear</a></li>
+        <li><a href="power/keizen.html">Powerlifting-Keizen </a></li>
       </ul>
     </div>
 
@@ -147,18 +142,10 @@
       </div>
     </div>
 
-    <footer>
-      <nav>
-        <figure>
-          <a href="./index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><figcaption>Home</figcaption></a>
-        </figure>
-        <figure>
-          <a href="./glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><figcaption>Glossay</figcaption> </a>
-        </figure>
-        <figure>
-          <a href="./myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><figcaption>myProfile</figcaption></a>
-        </figure>
-      </nav>
+    <footer id="navbar">
+          <a href="index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
+          <a href="glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
+          <a href="myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
     </footer>
   </div>
 </body>
