@@ -12,39 +12,26 @@ function loadProfile (){
   var text = currUserObj.userName ;
   var textnode=document.createTextNode(text);
   node.appendChild(textnode);
-  document.getElementById("userInfo").appendChild(node);
+  accInfo.appendChild(node);
+  //user's weight
+  var accInfo = document.getElementById("userInfo");
+  var node = document.createElement("Li");
+  var text = currUserObj.userWeight ;
+  var textnode=document.createTextNode(text);
+  node.appendChild(textnode);
+  accInfo.appendChild(node);
   // grab user's workout program
   node = document.createElement("Li");
   text = "Program: " + currUserObj.progName;
   textnode=document.createTextNode(text);
   node.appendChild(textnode);
-  document.getElementById("userInfo").appendChild(node);
-
-  /*
-  for (var i=0; i<picArray.length; i++){
-    pictures.innerHTML = "<img src=''>";
-    // access each img tag by parent[X].src = userPics[X]
-
-    pictures[i].setAttribute('src', picArray[i]);
-  }
-  */
-}
-
-function personalRecord() {
-
-}
-
-function imageLoader() {
-  var reader = new FileReader();
-  reader.onload = function(event) {
-    img = new Image();
-    img.onload = function(){
-      ctx.drawImage(img,0,0);
-    }
-    img.src = reader.result;
-    currUserObj.userPics.push(reader.result);
-  }
-  reader.readAsDataURL(fileInput.files[0]);
+  accInfo.appendChild(node);
+  // create profile edit button
+  node = document.createElement("button");
+  text = "View and edit profile";
+  textnode=document.createTextNode(text);
+  node.appendChild(textnode);
+  accInfo.appendChild(node);
 }
 
 /*
@@ -120,11 +107,13 @@ clearphoto();
 /* Once the doc has loaded create t*/
 $(document).ready(function(){
   $("#logout").hide();
+  $("#program").show();
   var currUser = localStorage.getItem("currentUser");
   var currUserObj = localStorage.getItem(currUser);
   // check to see if user is logged in
   if (localStorage.getItem('loggedIn') && currUserObj){
     var currUserObj = JSON.parse(currUserObj);
+      loadProfile();
     // show the logout button
     $("#logout").show();
     // will log the user out and redirect them to the home page
@@ -135,22 +124,6 @@ $(document).ready(function(){
       $("#logout").hide();
       window.location.href = "./index.html";
     });
-    // if the user is logged in then load profile
-    loadProfile(); // this is supposed to grab all relevant data for the users profile
-    // creates the accordion => makes things collapsable
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
 
     //var fileInput = document.getElementById('fileInput');
     //fileInput.addEventListener('change', imageLoader(), false);
@@ -160,37 +133,7 @@ $(document).ready(function(){
     $("#program").click(function (){
       window.location.href= currUserObj.userPrograms;
     });
-    // will call upon the function new picture that runs sub functions to capture an image
-    $('input#fileContainer').on('change', function () {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        console.log(reader.result + '->' + typeof reader.result)
-        var thisImage = reader.result;
-        localStorage.setItem("imgData", thisImage);
-      };
-      reader.readAsDataURL(this.files[0]);
-    });
-    $('input#show').click(function () {
-      var dataImage = localStorage.getItem('imgData');
-      console.log(dataImage);
-      var imgCtr = $('<img/>').prop('src', dataImage);
-      $('div#imgContainer').append(imgCtr);
-    });
-    $("#Add").click(function (){
-      console.log("clicked submit");
-      var exercise = $("#lift").value;
-      var record = $("#weight").value;
-      console.log("record = " + record);
-      var node = document.createElement("Li");
-      var text = "<li>" + exercise + " == " + record + "</li>";
-      var textnode=document.createTextNode(text);
-      node.appendChild(textnode);
-      document.getElementById("list").appendChild(node);
-    });
   } else {
-    // if user is not logged in then prompt them to
-    alert("Login to access your profile");
-
-    window.location.href = "./login.html";
+    window.location.href="./login.html";
   }
 });

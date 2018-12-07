@@ -5,13 +5,25 @@ function userProfile(email, password, name) {
   this.userName = name;
   this.userPrograms = "";
   this.progName = "";
+  this.userWeight = "";
   this.userPics = ["./fillerPics/profile.png"];
+  this.userPicDates = [];
+  this.userPersonalRec = [];
+  this.userPersonalWeight = [];
 }
 
 /* Example User */
 var sampleUser = new userProfile("wert0321@aim.com", "wert0321", "Austin Nim")
 sampleUser.userPrograms = "./power/novicedetails.html";
 sampleUser.progName = "Power Lifting - Novice";
+sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
+sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
+sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
+sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
+sampleUser.userPics.push("./fillerPics/model.JPG");
+sampleUser.userWeight = "140lbs";
+sampleUser.userPersonalRec.push("Deadlift");
+sampleUser.userPersonalWeight.push("145");
 localStorage.setItem("wert0321@aim.com", JSON.stringify(sampleUser));
 
 
@@ -28,9 +40,11 @@ function validate() {
     console.log("Entered user pass = " + password);
     // check password => if pass != pass then say password is incorrect else reload page with profile
     if(userPass === password){
+      console.log("approved password")
       localStorage.setItem("loggedIn", "true");
       localStorage.setItem("currentUser", currUser);
-      loadProfile();
+      console.log("returning to profile");
+      window.location.href = "./myprofile.html";
     } else {
       alert("incorrect password");
     }
@@ -42,12 +56,11 @@ function validate() {
 $(document).ready(function (){
   //run validate to check info once submit is hit
   $("#submitInfo").click( function(){
+    console.log("validating password");
     validate();
-    document.getElementById("loginPopup").close();
   });
   // close the text box
   $("#close").click( function (){
-    $("#loginPopup").hide();
     window.location.href = "./index.html";
   });
 });

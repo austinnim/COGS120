@@ -1,0 +1,54 @@
+@media only screen and (max-width:1000px){
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    align-items: center;
+  }
+
+  .largelink {
+     text-decoration: none;
+     margin-left: 1%;
+     font-size: 2vh;
+     float: left;
+     margin-right: 20px;
+     color: black;
+   }
+
+  h1{
+    grid-row-start:1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+        font-size: 3vh;
+  }
+
+  #picgallery {
+    grid-row-start: 2;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 1px solid black;
+    padding-top: 20px;
+  }
+  img {
+    min-width: 25%;
+    max-width: 25%;
+    flex-basis: auto; /* default value */
+    flex-grow: 1;
+  }
+  footer {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: #DEDED2;
+   overflow:auto;
+   text-align: center;
+  }
+
+  input {
+
+  }
+}

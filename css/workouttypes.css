@@ -6,10 +6,13 @@
     text-align: center;
     align-items: center;
   }
+
   body {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
   }
+
 
   .grid-container header{
     grid-column-end: 4;

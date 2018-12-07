@@ -2,32 +2,27 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <base href="./" />
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <link rel="stylesheet" href="./css/login.css" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/user.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="grid-container">
-      <header>
-        <h1> LOGIN </h1>
-      </header>
+    <form id="accountInfo" method="post">
       <h1> LOGIN </h1>
-      <form id="accountInfo" method="post">
-        <label for="user">Email:
-          <input id="user" value="wert0321@aim.com" type="text" name="username" placeholder="ie: username@gmail.com"/>
-        </label>
-        <hr />
-        <label for="password">Password:
-          <input id="password" value="wert0321" type="text" name="password"/>
-        </label>
-        <hr />
-        <div id="options">
-          <a href="signup.html">Sign Up </a>
-          <input id="close" type="button" name="close" value="close">
-          <input id="submitInfo" type="submit" value="submit" name="submit">
-        </div>
-      </form>
-    </div>
+      <label for="user">Email:
+        <input id="user" value="wert0321@aim.com" type="text" name="username" placeholder="ie: username@gmail.com"/>
+      </label>
+      <br>
+      <label for="password">Password:
+        <input id="password" value="wert0321" type="text" name="password"/>
+      </label>
+      <a href="signup.html">Sign Up </a>
+      <div id="options">
+        <input id="close" type="button" name="Close" value="Close">
+        <input id="submitInfo" type="button" value="Submit" name="Submit">
+      </div>
+    </form>
   </body>
 </html>

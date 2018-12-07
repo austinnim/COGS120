@@ -13,50 +13,35 @@
 </head>
 <body>
   <div class="grid-container">
-    <!-- child -->
-    <button id="logout" type="button">Log out</button>
+    <h1>Profile</h1>
     <!-- child -->
     <header>
       <img id="profilePic" src="" alt="profile picture">
       <ul id="userInfo">
-
       </ul>
     </header>
 
     <!-- child -->
-    <div id="ctnProgButton">
-      <button id="program" type=button>Continue program </button>
-    </div>
+    <button id="logout" type="button">Log out</button>
 
     <!-- child -->
-    <div id="opt1">
-      <button class="accordion">Picture Progress</button>
-      <div class="panel">
-        <input id="fileContainer" type="file">
-        <input id="show" type="button" value="Show">
-        <div id="imgContainer"></div>
-      </div>
-    </div>
+
+    <button class="functions" id="program" onclick="window.location.href= './index.html'"> Start Program<p class="arrow">&#62;</p></button>
 
     <!-- child -->
-    <div id="opt2">
-      <button class="accordion" onclick="personalRecord()">Personal Records</button>
-      <div class="panel" id="personalRec">
-        <div id="userInput">
-        <label>Exercise:<input id="lift" type="text" placeholder ="Exercise"></label></br>
-        <label>Weight Lifted:<input id="weight" type="text" placeholder="Weight in KG/LB"></label>
-        <ul id='list'></ul>
-        <button type='button' value='add to list' id='Add' > Add</button>
-        <button id="edit">Edit Records</button>
-      </div>
 
-      </div>
-    </div>
+    <button class="functions" id="pictureprog" onclick="window.location.href = './pictureprogress.html'"> Picture Progress<p class="arrow">&#62;</p> </button>
+
+    <!-- child -->
+    <button class="functions" id="personalrec" onclick="window.location.href = './personalrecord.html'"> Personal Records<p class="arrow">&#62;</p> </button>
+
+
+
     <!-- child -->
     <footer id="navbar">
-          <a href="index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
-          <a href="glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
-          <a href="myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
+      <a href="./index.html" id="home"><img src="./navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
+      <a href="./glossary.html" id="glossary"><img src="./navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
+      <a href="./myprofile.html" id="myprofile"><img src="./navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
     </footer>
   </div>
 </body>

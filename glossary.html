@@ -2,13 +2,14 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <base href="./" />
   <title>Glossary Page</title>
-  <link rel="stylesheet" href="css/navbar.css" text="text/css" />
-  <link rel="stylesheet" href="css/glossary.css" text="text/css">
+  <link rel="stylesheet" href="./css/navbar.css" text="text/css" />
+  <link rel="stylesheet" href="./css/glossary.css" text="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/glossary.js">This page requires javascript</script>
+  <script type="text/javascript" src="./js/glossary.js">This page requires javascript</script>
+  <script src="./js/nav.js" type="text/javascript"></script>
+
 </head>
 <body>
   <div class="grid-container">
@@ -19,9 +20,9 @@
     <div id="searchBar">
       <input type="text" id="myInput" onkeyup="search()" placeholder="Search for terms" />
       <ul id="myUL">
-        <li><a href="power/strength.html">Powerlifting-Strength</a></li>
-        <li><a href="power/linear.html">Powerlifiting-Linear</a></li>
-        <li><a href="power/keizen.html">Powerlifting-Keizen </a></li>
+        <li><a href="./power/strength.html">Powerlifting-Strength</a></li>
+        <li><a href="./power/linear.html">Powerlifiting-Linear</a></li>
+        <li><a href="./power/keizen.html">Powerlifting-Keizen </a></li>
       </ul>
     </div>
 
@@ -41,12 +42,12 @@
 
         <div class="mySlides1 muscles">
           <picture>
-            <img src="x.png" alt="muscle groups used">
+            <img src="./fillerPics/x.png" alt="muscle groups used">
             <p>Insert picture of muscle groups associated with exercise</p>
           </picture>
         </div>
         <div class="mySlides1 instructions">
-          <img class="videos" src="SPONGEBOBLIFTINGPANTS.gif" alt="deadlift tutorial">
+          <img class="videos" src="./fillerPics/SPONGEBOBLIFTINGPANTS.gif" alt="deadlift tutorial">
         </div>
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
@@ -66,12 +67,12 @@
         </div>
         <div class="mySlides2 muscles">
           <picture>
-            <img src="x.png" alt="muscle groups used" />
+            <img src="./fillerPics/x.png" alt="muscle groups used" />
             <p>Insert picture of muscle groups associated with squat</p>
           </picture>
         </div>
         <div class="mySlides2 instructions">
-          <img src="SPONGEBOBLIFTINGPANTS.gif" alt="squat tutorial">
+          <img src="./fillerPics/SPONGEBOBLIFTINGPANTS.gif" alt="squat tutorial">
         </div>
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
@@ -89,12 +90,12 @@
         </div>
         <div class="mySlides3 muscles">
           <picture>
-            <img src="x.png" alt="muscle groups used">
+            <img src="./fillerPics/x.png" alt="muscle groups used">
             <p>Insert picture depicting hypertrophy</p>
           </picture>
         </div>
         <div class="mySlides3 instructions">
-          <img src="SPONGEBOBLIFTINGPANTS.gif" alt="video example of hypertrophy" />
+          <img src="./fillerPics/SPONGEBOBLIFTINGPANTS.gif" alt="video example of hypertrophy" />
         </div>
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
@@ -112,7 +113,7 @@
         </div>
         <div class="mySlides4 muscles">
           <picture>
-            <img src="x.png" alt="muscle groups used">
+            <img src="./fillerPics/x.png" alt="muscle groups used">
             <p>Insert information about rep ranges</p>
           </picture>
         </div>
@@ -132,7 +133,7 @@
         </div>
         <div class="mySlides5 muscles">
           <picture>
-            <img src="x.png" alt="muscle groups used" />
+            <img src="./fillerPics/x.png" alt="muscle groups used" />
             <p>Insert information about set ranges</p>
           </picture>
         </div>
@@ -143,9 +144,9 @@
     </div>
 
     <footer id="navbar">
-          <a href="index.html" id="home"><img src="navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
-          <a href="glossary.html" id="glossary"><img src="navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
-          <a href="myprofile.html" id="myprofile"><img src="navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
+          <a href="./index.html" id="home"><img src="./navbar_icons/home.png" alt="home icon" /><p>Home</p></a>
+          <a href="./glossary.html" id="glossary"><img src="./navbar_icons/glossary.png" alt="glossary icon" /><p>Glossay</p> </a>
+          <a href="./myprofile.html" id="myprofile"><img src="./navbar_icons/myprofile.png" alt="myprofile icon" /><p>myProfile</p></a>
     </footer>
   </div>
 </body>

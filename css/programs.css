@@ -2,18 +2,20 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2,1lfr);
-    font-family: 'Open Sans', sans-serif;
   }
 
   body {
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
   }
+
   .grid-container header {
     grid-column: span 2;
     background-color: pink;
     text-align: justify;
   }
+
 
   #flex-header {
     display: flex;

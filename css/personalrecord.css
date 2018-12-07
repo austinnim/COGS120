@@ -1,0 +1,71 @@
+@media only screen and (max-width: 1000px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    width: 100%;
+  }
+
+    .largelink {
+       text-decoration: none;
+       margin-left: 1%;
+       font-size: 2vh;
+       float: left;
+       margin-right: 20px;
+       color: black;
+     }
+
+    h1{
+      grid-row-start:1;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      font-size: 3vh;
+    }
+  .userInput {
+    grid-column: span 4;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+  input {
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    padding: 10px;
+  }
+  
+  ul {
+    grid-column:span 4;
+    list-style-type: none;
+  }
+
+  li{
+    text-decoration: none;
+    font-size: 30px;
+  }
+  #btns {
+    grid-column: span 4;
+    text-align: center;
+    margin-top: 10%;
+
+  }
+  #Add {
+    font-size: 2vh;
+    border: 1px solid black;
+        margin-left: 30px;
+
+  }
+  #edit {
+    font-size: 2vh;
+    border: 1px solid black;
+    margin-left: 30px;
+
+  }
+}
