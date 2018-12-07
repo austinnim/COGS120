@@ -14,8 +14,8 @@ function userProfile(email, password, name) {
 
 /* Example User */
 var sampleUser = new userProfile("wert0321@aim.com", "wert0321", "Austin Nim")
-sampleUser.userPrograms = "./power/novicedetails.html";
-sampleUser.progName = "Power Lifting - Novice";
+sampleUser.userPrograms = "./power/lineardetails.html";
+sampleUser.progName = "Power Lifting - Linear";
 sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
 sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
 sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
