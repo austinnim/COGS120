@@ -9,27 +9,28 @@
   </head>
   <body>
     <div class="grid-container">
-      <header>
+      <header id="strengthheader">
         <div id="flex-header">
           <a href="./powerlifting.html">&#10229;</a>
           <h1>Strength</h1>
         </div>
-        <p>Description of workout: wow wow wow wow wow wow wow wow wow wow wow</p>
-        <p>Length of Workout: X weeks</p>
+        <p>Description of workout: Definition: The program is focused on the three main lifts; squat, bench press, deadlift. The weights you use each lifting day is based off of your current 1 rep max for the squat, bench press, and deadlift. You will be lifting using several different set and rep ranges throughout the 6 week program.
+        </p>
+        <p>Length of Workout: 6 weeks</p>
       </header>
 
       <main>
         <div class="column-1">
-          <p> Exercise 1 </p>
-          <p> Exercise 2 </p>
-          <p> Exercise 3 </p>
-          <p> Exercise 4 </p>
+          <p> Squat </p>
+          <p> Squat </p>
+          <p> Deadlift </p>
+          <p> Deadlift </p>
         </div>
         <div class="column-2">
-          <p> # of Reps </p>
-          <p> # of Reps </p>
-          <p> # of Reps </p>
-          <p> # of Reps </p>
+          <p> 1x4 </p>
+          <p> 1x6 </p>
+          <p> 1x4 </p>
+          <p> 1x6 </p>
         </div>
       </main>
 
@@ -37,7 +38,7 @@
         <button type="button" id="chosenprogram">START PROGRAM</button>
         <script>
           var chosen = document.getElementById("chosenprogram");
-          chose.addEventListener("click", function(){
+          chosen.addEventListener("click", function(){
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);

@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />  </head>
   <body>
     <div class="grid-container">
-      <header>
+      <header id="powerheader">
         <div id="flex-header">
           <a href="./powerlifting.html">&#10229;</a>
           <h1>Powerbuilding</h1>
         </div>
-        <p>Description of workout: wow wow wow wow wow wow wow wow wow wow wow</p>
-        <p>Length of Workout: X weeks</p>
+        <p>Description of workout: Powerbuilding is a combination of powerlifting and bodybuilding training principles in order to get brutally strong whilst still building as much muscle as possible.
+        </p>
+        <br>
+        <p>Length of Workout: 16 weeks</p>
       </header>
 
       <main>
         <div class="column-1">
-          <p> Exercise 1 </p>
-          <p> Exercise 2 </p>
-          <p> Exercise 3 </p>
-          <p> Exercise 4 </p>
+          <p> Shoulder Press </p>
+          <p> Cable Row </p>
+          <p> Hammer Curl </p>
+          <p> Tricep Pushdown</p>
         </div>
         <div class="column-2">
-          <p> # of Reps </p>
-          <p> # of Reps </p>
-          <p> # of Reps </p>
-          <p> # of Reps </p>
+          <p> 1x12 </p>
+          <p> 1x12 </p>
+          <p> 1x12 </p>
+          <p> 1x12 </p>
         </div>
       </main>
 
@@ -35,7 +37,7 @@
         <button type="button" id="chosenprogram">START PROGRAM</button>
         <script>
           var chosen = document.getElementById("chosenprogram");
-          chose.addEventListener("click", function(){
+          chosen.addEventListener("click", function(){
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);

@@ -120,6 +120,9 @@
   .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
     display: none;
   }
+  .details{
+     margin-top: 10px;
+  }
 
 
   .prev, .next {
@@ -160,7 +163,8 @@
   }
   .muscles img {
     width: 200px;
-    height: 200px;
+    height:200px;
+    background-color: black;
   }
   .instructions {
     padding-top: 2%;

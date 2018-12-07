@@ -8,27 +8,28 @@
   </head>
   <body>
     <div class="grid-container">
-      <header>
+      <header id="linearheader">
         <div id="flex-header">
           <a href="./powerlifting.html">&#10229;</a>
           <h1>Linear</h1>
         </div>
-        <p>Description of workout: wow wow wow wow wow wow wow wow wow wow wow</p>
-        <p>Length of Workout: X weeks</p>
+        <p>A linear program initially uses high volume and low intensity. The training for LP progresses through mesocycles or phases where the volume decreases, and intensity increases. This style of training is broken down into phases that focus on hypertrophy, strength, power, and transition phases.
+</p>
+        <p>Length of Workout: 16 weeks</p>
       </header>
 
       <main>
         <div class="column-1">
-          <p> Exercise 1 </p>
-          <p> Exercise 2 </p>
-          <p> Exercise 3 </p>
-          <p> Exercise 4 </p>
+          <p> Bench </p>
+          <p> Bench </p>
+          <p> Bench</p>
+          <p> Bench</p>
         </div>
         <div class="column-2">
-          <p> # of Reps </p>
-          <p> # of Reps </p>
-          <p> # of Reps </p>
-          <p> # of Reps </p>
+          <p> 1x5 </p>
+          <p> 2x5 </p>
+          <p> 3x3 </p>
+          <p> 4x3 </p>
         </div>
       </main>
 
@@ -36,7 +37,7 @@
         <button type="button" id="chosenprogram">START PROGRAM</button>
         <script>
           var chosen = document.getElementById("chosenprogram");
-          chose.addEventListener("click", function(){
+          chosen.addEventListener("click", function(){
             var currUser = localStorage.getItem("currentUser");
             var currUserObj = localStorage.getItem(currUser);
             currUserObj= JSON.parse(currUserObj);

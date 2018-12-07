@@ -7,7 +7,7 @@ function userProfile(email, password, name) {
   this.progName = "";
   this.userWeight = "";
   this.userPics = ["./fillerPics/profile.png"];
-  this.userPicDates = [];
+  this.userDates = [];
   this.userPersonalRec = [];
   this.userPersonalWeight = [];
 }
@@ -20,10 +20,10 @@ sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
 sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
 sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
 sampleUser.userPics.push("./fillerPics/SPONGEBOBLIFTINGPANTS.gif");
-sampleUser.userPics.push("./fillerPics/model.JPG");
 sampleUser.userWeight = "140lbs";
 sampleUser.userPersonalRec.push("Deadlift");
 sampleUser.userPersonalWeight.push("145");
+sampleUser.userDates.push("  starting point");
 localStorage.setItem("wert0321@aim.com", JSON.stringify(sampleUser));
 
 

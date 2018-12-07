@@ -11,12 +11,29 @@ $(document).ready(function(){
   }
   // will call upon the function new picture that runs sub functions to capture an image
   $('input#fileContainer').on('change', function () {
+    var img = new Image();
+    img.onload = function() {
+      var canvas = document.createElement('canvas');
+      canvas.width = this.width;
+      canvas.height = this.height;
+      document.body.appendChild(canvas);
+
+      var context = canvas.getContext('2d');
+      context.drawImage(img, 0, 0);
+
+      var data = canvas.toDataURL();
+      localStorage.setItem('uploadedImage', data); // save image data
+    };
+    var imgSrc = 'file://' + $("#uploadImage").val();
+
+    /*
     var reader = new FileReader();
       reader.onload = function () {
           var thisImage = reader.result;
           localStorage.setItem("imgdata", thisImage);
       };
     reader.readAsDataURL(this.files[0]);
+    */
     var node = document.createElement("IMG");
     node.setAttribute("src", localStorage.getItem("imgdata"));
     var parentNode = document.getElementById("picgallery");

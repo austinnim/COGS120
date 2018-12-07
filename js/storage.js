@@ -128,10 +128,14 @@ $(document).ready(function(){
     //var fileInput = document.getElementById('fileInput');
     //fileInput.addEventListener('change', imageLoader(), false);
     // show the users program
-    $("#program").show();
     // will redirect the user back to their program page
     $("#program").click(function (){
-      window.location.href= currUserObj.userPrograms;
+      if(currUserObj.userPrograms === ""){
+        alert("Choose a program from the home screen!");
+        window.location.href= "./index.html";
+      } else {
+          window.location.href = currUserObj.userPrograms;
+      }
     });
   } else {
     window.location.href="./login.html";

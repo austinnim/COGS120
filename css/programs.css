@@ -12,11 +12,152 @@
 
   .grid-container header {
     grid-column: span 2;
-    background-color: pink;
     text-align: justify;
+    color:white;
   }
+  #absheader {
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* your image */
+    url("../body/abs.jpg");
+     background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      position: relative;
+          background-size: cover;
+          width: 100%;
+          height: 600px;
+  }
+  #upperbodyheader {
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* your image */
+    url("../body/upper.jpg");
+     background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      position: relative;
+          background-size: cover;
+          width: 100%;
+          height: 600px;
+  }
+  #lowerbodyheader {
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* your image */
+    url("../body/legs.jpg");
+     background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      position: relative;
+          background-size: cover;
+          width: 100%;
+          height: 600px;
+  }
+#olyadvancedheader {
+  background-image:
+  /* top, transparent red */
+  linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  /* your image */
+  url("../olympic/olyadvanced.jpg");
+   background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    position: relative;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+}
+#olyinterheader {
+  background-image:
+  /* top, transparent red */
+  linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  /* your image */
+  url("../olympic/olyinter.jpg");
+   background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    position: relative;
 
-
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+}
+#olynoviceheader {
+  background-image:
+  /* top, transparent red */
+  linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  /* your image */
+  url("../olympic/olynovicebg.png");
+   background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+  #powerheader {
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* your image */
+    url("../power/powerbuilding.jpg");
+     background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: cover;
+      width: 100%;
+      height: 600px;
+  }
+  #strengthheader{
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    /* your image */
+    url("../power/strength.jpg");
+     background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: cover;
+      width: 100%;
+      height: 600px;
+  }
+  #linearheader {
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    /* your image */
+    url("../power/linearbg.png");
+     background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: cover;
+      width: 100%;
+      height: 600px;
+  }
   #flex-header {
     display: flex;
     align-items: center;
@@ -26,19 +167,24 @@
 
   #flex-header a {
     margin-right: 5%;
-
+    color: white;
     font-size: 3vh;
     text-decoration: none;
   }
 
   #flex-header h1 {
-    font-size: 6vh;
+    font-size: 5vh;
+    color: white;
     margin-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
   .grid-container header > p {
-    font-size: 2vh;
+    font-size: 40px;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .grid-container main {
